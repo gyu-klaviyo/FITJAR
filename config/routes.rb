@@ -1,4 +1,5 @@
 Fitjar::Application.routes.draw do
+  devise_for :users
   resources :challenges
 
   get "pages/about"

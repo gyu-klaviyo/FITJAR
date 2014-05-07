@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @challenge.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @challenge.description %>
+</p>
+
+<p>
+  <strong>Stake:</strong>
+  <%= @challenge.stake %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @challenge.duration %>
+</p>
+
+<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
+<%= link_to 'Back', challenges_path, class: "btn btn-link" %>

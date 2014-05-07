@@ -1,0 +1,33 @@
+<h1>Listing challenges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Stake</th>
+      <th>Duration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @challenges.each do |challenge| %>
+      <tr>
+        <td><%= challenge.name %></td>
+        <td><%= challenge.description %></td>
+        <td><%= challenge.stake %></td>
+        <td><%= challenge.duration %></td>
+        <td><%= link_to 'Show', challenge, class: "btn btn-link" %></td> %></td>
+        <td><%= link_to 'Edit', edit_challenge_path(challenge), class: "btn btn-link" %></td> %></td>
+        <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td> %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Challenge', new_challenge_path %>

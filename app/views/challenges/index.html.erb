@@ -3,7 +3,7 @@
     <% @challenges.each do |challenge| %>
       <div class="col-md-3">
         <div class="thumbnail">
-          <%= image_tag challenge.image.url %>
+        
           <div class="caption">
             <h3><%= challenge.name %></h3>
             <p><%= number_to_currency(challenge.stake) %></p>

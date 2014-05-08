@@ -67,8 +67,8 @@ class ChallengesController < ApplicationController
       @challenge = Challenge.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :description, :stake, :duration)
+      params.require(:challenge).permit(:name, :description, :stake, :duration, :image)
     end
 end

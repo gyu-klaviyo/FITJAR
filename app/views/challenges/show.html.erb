@@ -1,24 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @challenge.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @challenge.description %>
-</p>
-
-<p>
-  <strong>Stake:</strong>
-  <%= @challenge.stake %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @challenge.duration %>
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @challenge.image.url %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3><%= @challenge.name %></h3>
+    <p><%= number_to_currency(@challenge.stake) %></p>
+    <p><%= @challenge.description %></p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
 <%= link_to 'Back', challenges_path, class: "btn btn-link" %>

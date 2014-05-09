@@ -25,6 +25,10 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
+    #set user id for challenge to current user
+    #set this to HOST ID
+    #take user id and assign to host if user created=HOST...else user END
+    @challenge.user_id = current_user.id
 
     respond_to do |format|
       if @challenge.save

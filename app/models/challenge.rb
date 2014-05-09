@@ -7,9 +7,13 @@ class Challenge < ActiveRecord::Base
         :storage => :dropbox,
         :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
         :path => ":style/:id_:filename"
-  end
-end
+  	end
+		validates :name, :description, :stake, presence: true
+  		validates :stake, numericality: { greater_than: 0 }
+  		validates_attachment_presence :image
 
+  		belongs_to :user
+	end
 
 
 

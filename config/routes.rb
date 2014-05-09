@@ -5,6 +5,7 @@ Fitjar::Application.routes.draw do
   get "pages/about"
   get "pages/contact"
   get "pages/blog"
+  get 'host' => "challenges#host"
 
   root 'challenges#index'
   # The priority is based upon order of creation: first created -> highest priority.

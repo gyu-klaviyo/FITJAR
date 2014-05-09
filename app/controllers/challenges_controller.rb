@@ -1,12 +1,18 @@
 class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:host, :new, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
+
+#JQ I need to re-define this host not just as a current user signed in by higher authority than a regular user
+
+ def host
+    @challenges = Challenge.where(user: current_user).order("created_at DESC")
+  end
 
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.all.order("created_at DESC")
   end
 
   # GET /challenges/1

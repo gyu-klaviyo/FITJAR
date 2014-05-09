@@ -8,14 +8,6 @@
           <div class="caption">
             <h3><%= challenge.name %></h3>
             <h3><%= "Hosted by #{challenge.user.name}" %></h3>
-            <!--#if user is already signed in then show these edit and destroy links-->
-           
-            <p><%= number_to_currency(challenge.stake) %></p>
-              <% if (user_signed_in?) && (current_user == challenge.user) %>
-                  
-                  <%= link_to 'Edit', edit_challenge_path(challenge), class: "btn btn-link" %>
-                  <%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
-              <%end%>
           </div>
         </div>
       </div>

@@ -6,7 +6,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.jumbotron {
+  background-image: url('https://dl.dropboxusercontent.com/s/n8w9l6s88551dfq/jumbotron.jpg');
+  h1, h2 {
+    font-family: guardian-egyptt, georgia, serif;
+  }
+}
 
 .navbar-default {
   background-color: #111111;

@@ -1,5 +1,7 @@
 class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
 
   # GET /challenges
   # GET /challenges.json
@@ -74,5 +76,12 @@ class ChallengesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
       params.require(:challenge).permit(:name, :description, :stake, :duration, :image)
+    end
+
+    #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR
+    def check_user
+      if current_user != @challenge.user
+        redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
+      end
     end
 end

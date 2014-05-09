@@ -12,6 +12,7 @@ class Challenge < ActiveRecord::Base
   		validates :stake, numericality: { greater_than: 0 }
   		validates_attachment_presence :image
 
+#belongs to HOST
   		belongs_to :user
 	end
 

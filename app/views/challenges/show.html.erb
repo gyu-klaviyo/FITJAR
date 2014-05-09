@@ -14,5 +14,9 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
-<%= link_to 'Back', challenges_path, class: "btn btn-link" %>
+<% if current_user == @challenge.user %>
+  <%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
+<% end %>
+
+
+<%= link_to 'Back', challenge_path, class: "btn btn-link" %>

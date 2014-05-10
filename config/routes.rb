@@ -3,13 +3,14 @@ Fitjar::Application.routes.draw do
 #include payment id in the URL "do"
   devise_for :users
   resources :challenges do
-  resources :payments
+  resources :payments, only: [:new, :create]
   end
 
   get "pages/about"
   get "pages/contact"
   get "pages/blog"
   get 'host' => "challenges#host"
+  get 'history' => "payments#history"
 
   root 'challenges#index'
   # The priority is based upon order of creation: first created -> highest priority.

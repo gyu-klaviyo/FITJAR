@@ -13,8 +13,8 @@ class Challenge < ActiveRecord::Base
   		validates_attachment_presence :image
 
 #belongs to HOST
-  		belongs_to :user
-	end
-
+  	belongs_to :user
+    has_many :payments
+end
 
 

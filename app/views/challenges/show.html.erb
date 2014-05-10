@@ -9,8 +9,11 @@
     <h3><%= @challenge.name %></h3>
     <p><%= number_to_currency(@challenge.stake) %></p>
     <p><%= @challenge.description %></p>
+  <br>
+      <div class="center">
+        <%= link_to "Confirm Now", new_challenge_payment_path(@challenge), class: "btn btn-primary" %>
+      </div>
   </div>
-</div>
 
 <% if current_user == @challenge.user %>
   <%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |

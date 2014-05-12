@@ -11,7 +11,7 @@
     <p><%= @challenge.description %></p>
   <br>
       <div class="center">
-        <%= link_to "Confirm Now", new_challenge_payment_path(@challenge), class: "btn btn-primary" %>
+        <%= link_to "Confirm Now", new_challenge_payment_path(@challenge), class: "btn btn-primary", data: { no_turbolink: true } %>
       </div>
   </div>
 

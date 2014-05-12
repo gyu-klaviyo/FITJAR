@@ -32,6 +32,20 @@ class PaymentsController < ApplicationController
     @payment.player_id = current_user.id
     @payment.host_id = @host.id
 
+     Stripe.api_key = ENV["STRIPE_API_KEY"]
+    token = params[:stripeToken]
+
+    begin
+      charge = Stripe::Charge.create(
+        :amount => (@challenge.stake * 100).floor,
+        :currency => "usd",
+        :card => token
+        )
+      flash[:notice] = "Thanks for ordering!"
+    rescue Stripe::CardError => e
+      flash[:danger] = e.message
+    end
+
     respond_to do |format|
       if @payment.save
         #redirect them to DASHBOARD

@@ -13,6 +13,17 @@ body {
   }
 }
 
+.carousel-inner {
+  
+ h1, h2 {
+    font-family: helvetica, georgia, san-serif;
+    max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+  }
+
+}
+
 .navbar-default {
   background-color: #111111;
 }

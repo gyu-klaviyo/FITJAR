@@ -4,8 +4,9 @@ class PaymentsController < ApplicationController
   # GET /payments
   # GET /payments.json
   
+  #mistook ORDER for the order "method"
  def history
-    @payments = Payment.all.where(host: current_user).payment("created_at DESC")
+    @payments = Payment.all.where(host: current_user).order("created_at DESC")
   end
 
 
@@ -45,6 +46,12 @@ class PaymentsController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
+
+ transfer = Stripe::Transfer.create(
+      :amount => (@challenge.stake * 95).floor,
+      :currency => "usd",
+      :recipient => @host.recipient
+      )
 
     respond_to do |format|
       if @payment.save

@@ -5,7 +5,7 @@ class ChallengesController < ApplicationController
 
 #JQ I need to re-define this host not just as a current user signed in by higher authority than a regular user
 
- def host
+  def host
     @challenges = Challenge.where(user: current_user).order("created_at DESC")
   end
 
@@ -38,6 +38,19 @@ class ChallengesController < ApplicationController
     #take user id and assign to host if user created=HOST...else user END
     @challenge.user_id = current_user.id
 
+    if current_user.recipient.blank?
+          Stripe.api_key = ENV["STRIPE_API_KEY"]
+          token = params[:stripeToken]
+
+          recipient = Stripe::Recipient.create(
+            :name => current_user.name,
+            :type => "individual",
+            :bank_account => token
+            )
+    end
+      current_user.recipient = recipient.id
+      current_user.save
+  
     respond_to do |format|
       if @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }

@@ -86,6 +86,6 @@
 <!--switch this to button after-->
 
   <% if user_signed_in? %>
-  <%= link_to 'New challenge', new_challenge_path, class: "btn btn-link" %>
+  <%= link_to 'New challenge', new_challenge_path, class: "btn btn-link", data: { no_turbolink: true } %>
   <% end %>
 

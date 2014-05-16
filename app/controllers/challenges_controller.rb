@@ -97,7 +97,7 @@ class ChallengesController < ApplicationController
       params.require(:challenge).permit(:name, :description, :stake, :duration, :image)
     end
 
-    #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR
+    #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     def check_user
       if current_user != @challenge.user
         redirect_to root_url, alert: "Sorry, this listing belongs to someone else"

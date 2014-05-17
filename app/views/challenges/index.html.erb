@@ -83,9 +83,21 @@
 </div>
 
 <br>
+
+<%= will_paginate @posts,renderer: BootstrapPagination::Rails %>
+<br>
 <!--switch this to button after-->
 
-  <% if user_signed_in? %>
-  <%= link_to 'New challenge', new_challenge_path, class: "btn btn-link", data: { no_turbolink: true } %>
-  <% end %>
+<% if user_signed_in? %>
+    <%= link_to new_challenge_path, class: "btn btn-primary", data: {no_turbolink: true} do %>
 
+    <i class ="glyphicon glyphicon-plus"></i> New Challenge
+    <%end%>
+
+  <%#= link_to 'New challenge', new_challenge_path, class: "btn btn-primary", data: { no_turbolink: true } %>
+<% end %>
+<br>
+
+<div class="center">
+    <div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+</div>

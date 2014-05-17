@@ -37,6 +37,10 @@
     <%= f.text_field :duration, class: "form-control" %>
   </div>
 
+  <div class="col-md-3">
+    <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
+  </div>
+
 
 <!-- JQ            ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME; DO DATE DURATION 7, 21, OR 30 DAY CHALLENGE-->
 

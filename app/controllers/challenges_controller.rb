@@ -12,7 +12,7 @@ class ChallengesController < ApplicationController
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all.order("created_at DESC")
+    @challenges = Challenge.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4 )
   end
 
   # GET /challenges/1

@@ -33,7 +33,8 @@ class PaymentsController < ApplicationController
     @payment.player_id = current_user.id
     @payment.host_id = @host.id
 
-     Stripe.api_key = ENV["STRIPE_API_KEY"]
+    
+    Stripe.api_key = ENV["STRIPE_API_KEY"]
     token = params[:stripeToken]
 
     begin
@@ -47,7 +48,7 @@ class PaymentsController < ApplicationController
       flash[:danger] = e.message
     end
 
- transfer = Stripe::Transfer.create(
+      transfer = Stripe::Transfer.create(
       :amount => (@challenge.stake * 95).floor,
       :currency => "usd",
       :recipient => @host.recipient

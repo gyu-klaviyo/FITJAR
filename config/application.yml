@@ -1,0 +1,4 @@
+APP_SECRET: "455jdvtqj7dwmaa"
+APP_TOKEN_SECRET: "y8s2mawcu7gti2u"
+STRIPE_API_KEY: "sk_test_uhbOPaZ5Z2wcT8pMwxtQiKXx"
+STRIPE_PUBLIC_KEY: "pk_test_bJk2SJTFO9WuFG4EwibSZxGI"

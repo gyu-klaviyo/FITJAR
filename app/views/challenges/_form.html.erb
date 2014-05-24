@@ -2,7 +2,7 @@
   <% if @challenge.errors.any? %>
     <div id="error_explanation"class="alert alert-danger alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h2>
+      <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
 
       <ul>
       <% @challenge.errors.full_messages.each do |msg| %>
@@ -37,9 +37,7 @@
     <%= f.text_field :duration, class: "form-control" %>
   </div>
 
-  <div class="col-md-3">
-    <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
-  </div>
+ 
 
 
 <!-- JQ            ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME; DO DATE DURATION 7, 21, OR 30 DAY CHALLENGE-->
@@ -49,25 +47,29 @@
   </div>
 
 
- <% if current_user.recipient.blank? %>
+   <% if current_user.recipient.blank? %>
       <br>
-      <h1>Bank Account Information</h1>
 
-      <div class="form-group">
-        <%= label_tag :country %>
-        <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
-      </div>
-      <div class="form-group">
-        <%= label_tag :routing_number %>
-        <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
-      </div>
-      <div class="form-group">
-        <%= label_tag :account_number %>
-        <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
-      </div>
-  <% end %>
+    <h1>Bank Account Information</h1>
 
     <div class="form-group">
-      <%= f.submit class: "btn btn-primary" %>
+      <%= label_tag :country %>
+      <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
     </div>
+    <div class="form-group">
+      <%= label_tag :routing_number %>
+      <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :account_number %>
+      <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
+    </div>
+    <% end %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+
+
 <% end %>
+
+

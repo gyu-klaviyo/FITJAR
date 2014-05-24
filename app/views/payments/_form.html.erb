@@ -10,15 +10,16 @@
   <div class="col-md-8">
     <%= form_for([@challenge, @payment]) do |f| %>
       <% if @payment.errors.any? %>
-        <div id="error_explanation">class="alert alert-danger alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <h4><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h4>
+        <div id="error_explanation" class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          
+              <h4><%= pluralize(@payment.errors.count, "error") %> prohibited this order from being saved:</h4>
 
               <ul>
-          <% @payment.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
+               <% @payment.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+               <% end %>
+              </ul>
         </div>
       <% end %>
 

@@ -7,10 +7,21 @@ body {
 }
 
 .jumbotron {
-  background-image: url('https://dl.dropboxusercontent.com/s/n8w9l6s88551dfq/jumbotron.jpg');
+  background-image: url('https://dl.dropboxusercontent.com/s/5qqobps6h75jy9i/guy%20with%20abs%20%281%29.jpg');
   h1, h2 {
-    font-family: guardian-egyptt, georgia, serif;
+  font-family: helvetica, georgia, san-serif;
+  padding: 20px;
+  margin: 0 auto;
+  word-spacing: 5px;
+  font-weight: 100;
+  color: #FFFFFF;
   }
+}
+
+
+.site-footer{
+  background-color: #222222;
+
 }
 
 .carousel-inner {

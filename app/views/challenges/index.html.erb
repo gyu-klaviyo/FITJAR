@@ -1,19 +1,26 @@
 <div class="jumbotron">
-  <h1>Handcrafted items from <br>
-      around the world.</h1>
-  <h2>Discover one-of-a-kind items</h2>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  <div class="container">
+    <div class="center">
+      <h1>GET FIT, GET PAID!</h1>
+      <h2>Fitness Competition for Cash with Friends & Family</h2>
+       <h3>Powered By: FitBit, Jawbone UP, Nike+ FuelBand</h3>
+      <p><a class="btn btn-success btn-lg" role="button">Compete Now</a></p>
+    </div>
+  </div>  
 </div>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
+
+<!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+ 
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+ 
+
+
   <div class="carousel-inner">
     <div class="item active">
       <img src="https://dl.dropboxusercontent.com/s/n8w9l6s88551dfq/jumbotron.jpg" alt="https://dl.dropboxusercontent.com/s/n8w9l6s88551dfq/jumbotron.jpg">
@@ -26,7 +33,7 @@
     ...
   </div>
 
-  <!-- Controls -->
+
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
@@ -34,6 +41,7 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+   -->
 
 
 
@@ -41,8 +49,14 @@
 <h5>As Seen On </h5>
 <div class="row">
       <div class="col-xs-6 col-md-3">
+        <a href="https://dl.dropboxusercontent.com/home/Apps/FITJAR%202" class="thumbnail">
+          <img data-src="https://dl.dropboxusercontent.com/s/dwbwk8nacm0k68z/hbo.jpg" alt="https://dl.dropboxusercontent.com/s/dwbwk8nacm0k68z/hbo.jpg">
+        </a>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
         <a href="#" class="thumbnail">
-          <img data-src="Logo-Jar.jpg" alt="...">
+          <img data-src="https://dl.dropboxusercontent.com/home/Apps/FITJAR%202" alt="...">
         </a>
       </div>
 
@@ -57,12 +71,12 @@
           <img data-src="holder.js/100%x180" alt="...">
         </a>
       </div>
+</div>
 
-      <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
-          <img data-src="holder.js/100%x180" alt="...">
-        </a>
-      </div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
 </div>
 
 <div class="center">
@@ -84,7 +98,9 @@
 
 <br>
 
-<%= will_paginate @posts,renderer: BootstrapPagination::Rails %>
+<div class="center">
+  <%= will_paginate @posts,renderer: BootstrapPagination::Rails %>
+</div>
 <br>
 <!--switch this to button after-->
 
@@ -100,4 +116,5 @@
 
 <div class="center">
     <div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
 </div>

@@ -72095,3 +72095,4585 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 11:42:05
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 11:42:05 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:54:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (1.2ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (4.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (355.1ms)
+  Rendered layouts/_facebook.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (9.4ms)
+Completed 200 OK in 1173ms (Views: 909.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:08 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:54:09 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 12:54:23 -0700
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2014-05-24 12:55:15 -0700
+Processing by ChallengesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered challenges/_form.html.erb (23.5ms)
+  Rendered challenges/new.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:55:16 -0700
+
+
+Started POST "/challenges" for 127.0.0.1 at 2014-05-24 12:57:38 -0700
+Processing by ChallengesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GanbDRQdG6THmrprS3AbI/mfIy29b5MhiDyB+LM1no=", "challenge"=>{"name"=>"testor", "description"=>"asdf", "stake"=>"10000", "duration"=>"3", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fdb45ac0990 @tempfile=#<Tempfile:/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/RackMultipart20140524-584-n5fhcm>, @original_filename="Untitled.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"challenge[image]\"; filename=\"Untitled.png\"\r\nContent-Type: image/png\r\n">}, "stripeToken"=>"btok_45xBmaK9qJK45N"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: convert '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]' -auto-orient -resize "200" '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw20140524-584-gsa7tk'
+Command :: file -b --mime '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw20140524-584-gsa7tk'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: identify -format %m '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]'
+Command :: convert '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw.png[0]' -auto-orient -resize "100x100>" '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw20140524-584-qbuyez'
+Command :: file -b --mime '/var/folders/yf/zqc770ns0x169wlwd15db70r0000gn/T/911af7aa209e00b49f3d6fd2afa9256420140524-584-tjmrgw20140524-584-qbuyez'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.0ms)[0m  UPDATE "users" SET "recipient" = ?, "updated_at" = ? WHERE "users"."id" = 6  [["recipient", "rp_1045xB4PpT4qw9wWaTSdrDiF"], ["updated_at", Sat, 24 May 2014 19:57:39 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "challenges" ("created_at", "description", "duration", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "name", "stake", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 24 May 2014 19:57:39 UTC +00:00], ["description", "asdf"], ["duration", #<BigDecimal:7fdb45b03d08,'0.3E1',9(18)>], ["image_content_type", "image/png"], ["image_file_name", "Untitled.png"], ["image_file_size", 339263], ["image_updated_at", Sat, 24 May 2014 19:57:38 UTC +00:00], ["name", "testor"], ["stake", #<BigDecimal:7fdb44c64270,'0.1E5',9(18)>], ["updated_at", Sat, 24 May 2014 19:57:39 UTC +00:00], ["user_id", 6]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/challenges/39
+Completed 302 Found in 1062ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/challenges/39" for 127.0.0.1 at 2014-05-24 12:57:39 -0700
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "39"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:57:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:57:49 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (35.3ms)
+  Rendered layouts/_facebook.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 65.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/challenges/38" for 127.0.0.1 at 2014-05-24 12:57:59 -0700
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mChallenge Load (2.9ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "38"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered challenges/show.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/challenges/38/payments/new" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+Processing by PaymentsController#new as HTML
+  Parameters: {"challenge_id"=>"38"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "38"]]
+  Rendered payments/_form.html.erb (24.3ms)
+  Rendered payments/new.html.erb within layouts/application (27.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 53.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:02 -0700
+
+
+Started POST "/challenges/38/payments" for 127.0.0.1 at 2014-05-24 12:58:26 -0700
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GanbDRQdG6THmrprS3AbI/mfIy29b5MhiDyB+LM1no=", "payment"=>{"address"=>"3203 N. Stevens Ave", "city"=>"Rosemead", "state"=>"CA"}, "stripeToken"=>"tok_1045xC4PpT4qw9wWbLaZUW5G", "challenge_id"=>"38"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "38"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "payments" ("address", "challenge_id", "city", "created_at", "host_id", "player_id", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["address", "3203 N. Stevens Ave"], ["challenge_id", 38], ["city", "Rosemead"], ["created_at", Sat, 24 May 2014 19:58:27 UTC +00:00], ["host_id", 5], ["player_id", 6], ["state", "CA"], ["updated_at", Sat, 24 May 2014 19:58:27 UTC +00:00]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1245ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:58:27 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:27 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:28 -0700
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/GanbDRQdG6THmrprS3AbI/mfIy29b5MhiDyB+LM1no="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:58:59 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-24 12:59:00 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-24 12:59:08 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xr6fvpj6P9YHZ/dBMuGH8+I19YA8kV7VMdE2/0MWKbc=", "user"=>{"email"=>"jackson.q@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'jackson.q@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Thu, 22 May 2014 22:29:55 UTC +00:00], ["current_sign_in_at", Sat, 24 May 2014 19:59:08 UTC +00:00], ["sign_in_count", 8], ["updated_at", Sat, 24 May 2014 19:59:08 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:59:08 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:09 -0700
+
+
+Started GET "/challenges/39" for 127.0.0.1 at 2014-05-24 12:59:12 -0700
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mChallenge Load (1.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "39"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered challenges/show.html.erb within layouts/application (54.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 93.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/challenges/39/payments/new" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+Processing by PaymentsController#new as HTML
+  Parameters: {"challenge_id"=>"39"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "39"]]
+  Rendered payments/_form.html.erb (7.0ms)
+  Rendered payments/new.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 33.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:14 -0700
+
+
+Started POST "/challenges/39/payments" for 127.0.0.1 at 2014-05-24 12:59:24 -0700
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"scfULyE37F+SPrndRZYPis/jFNbdyxP9ayAxvzgGcxQ=", "payment"=>{"address"=>"3203 N. Stevens Ave", "city"=>"Rosemead", "state"=>"CA"}, "stripeToken"=>"tok_1045xD4PpT4qw9wWand3IuOO", "challenge_id"=>"39"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", "39"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "payments" ("address", "challenge_id", "city", "created_at", "host_id", "player_id", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["address", "3203 N. Stevens Ave"], ["challenge_id", 39], ["city", "Rosemead"], ["created_at", Sat, 24 May 2014 19:59:26 UTC +00:00], ["host_id", 6], ["player_id", 1], ["state", "CA"], ["updated_at", Sat, 24 May 2014 19:59:26 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1488ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 12:59:26 -0700
+
+
+Started GET "/challenges?page=2" for 127.0.0.1 at 2014-05-24 13:08:25 -0700
+Processing by ChallengesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 4[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered challenges/index.html.erb within layouts/application (30.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 61.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:08:40 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.9ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (46.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:13:13 -0700
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered challenges/index.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1889ms (Views: 1885.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:13:15 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:13:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:24 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:17:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.6ms)[0m  [1mSELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered challenges/index.html.erb within layouts/application (30.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_facebook.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:17:31 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:18:27 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+Processing by ChallengesController#index as HTML
+  [1m[36mChallenge Load (0.5ms)[0m  [1mSELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered challenges/index.html.erb within layouts/application (28.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_facebook.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:18:39 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:18:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered challenges/index.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 13:22:32 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 13:22:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:42:58 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (3.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (166.0ms)
+  Rendered layouts/_facebook.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 480ms (Views: 441.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:42:59 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:45:26 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:45:29 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:49:30 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:51:53 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (106.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:51:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:54:18 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.7ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:54:18 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:54:18 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:54:19 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:56:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-24 23:57:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-24 23:57:09 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-25 00:01:52 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-25 00:05:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (1.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (37.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-05-25 00:08:28 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:10:07 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 125.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:10:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:12:24 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:12:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:13:55 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (32.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 2036ms (Views: 2032.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:13:57 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:13:57 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:13:57 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:13:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:13:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:14:33 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.7ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1960ms (Views: 1956.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:14:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:16:09 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1973ms (Views: 1968.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:16:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:17:29 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (1.3ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (96.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1986ms (Views: 1982.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:31 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:17:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:18:16 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1967ms (Views: 1963.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:18 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:18:47 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1943ms (Views: 1939.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:18:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (32.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:21 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:19:22 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:44:13 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 00:45:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:44:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (29.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:01 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:02 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:02 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:27 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:29 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:45:30 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.9ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (23.6ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:46:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.2ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:47:35 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (2.1ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:47:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 01:48:15 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 01:48:15 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 01:48:15 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:15 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 01:48:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 11:02:42 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.6ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 11:04:01 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 117ms (Views: 114.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:20 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 14:02:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 14:03:11 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 14:03:12 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-26 12:53:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (4.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (163.9ms)
+  Rendered layouts/_facebook.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 528ms (Views: 487.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/challenges.css?body=1" for 127.0.0.1 at 2014-05-26 12:53:34 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/payments.css?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/challenge.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/assets/payments.js?body=1" for 127.0.0.1 at 2014-05-26 12:53:35 -0700
+
+
+Started GET "/challenges?page=2" for 127.0.0.1 at 2014-05-26 12:53:41 -0700
+Processing by ChallengesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 4
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered challenges/index.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_facebook.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/challenges?page=3" for 127.0.0.1 at 2014-05-26 12:54:00 -0700
+Processing by ChallengesController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 8
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered challenges/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 57.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-26 12:54:10 -0700
+Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" ORDER BY created_at DESC LIMIT 4 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered challenges/index.html.erb within layouts/application (42.4ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 2.3ms)

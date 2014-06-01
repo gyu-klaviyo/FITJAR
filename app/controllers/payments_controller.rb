@@ -33,8 +33,8 @@ class PaymentsController < ApplicationController
     @payment.player_id = current_user.id
     @payment.host_id = @host.id
 
-    
-    Stripe.api_key = ENV["STRIPE_API_KEY"]
+#stripe credit card payment begins
+   Stripe.api_key = ENV["STRIPE_API_KEY"]
     token = params[:stripeToken]
 
     begin
@@ -47,8 +47,9 @@ class PaymentsController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
+#stripe bank transfer begins
 
-      transfer = Stripe::Transfer.create(
+ transfer = Stripe::Transfer.create(
       :amount => (@challenge.stake * 95).floor,
       :currency => "usd",
       :recipient => @host.recipient
@@ -57,7 +58,7 @@ class PaymentsController < ApplicationController
     respond_to do |format|
       if @payment.save
         #redirect them to DASHBOARD
-        format.html { redirect_to root_url, notice: 'Payment was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Payment was successfully created.'}
         format.json { render action: 'show', status: :created, location: @payment }
       else
         format.html { render action: 'new' }

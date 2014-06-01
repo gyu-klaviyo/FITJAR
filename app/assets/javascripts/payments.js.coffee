@@ -9,7 +9,7 @@ payment =
         Stripe.card.createToken($('#new_payment'), payment.handleStripeResponse)
         false
 
-   handleStripeResponse: (status, response) ->
+  handleStripeResponse: (status, response) ->
     if status == 200
       $('#new_payment').append($('<input type="hidden" name="stripeToken" />').val(response.id))
       $('#new_payment')[0].submit()

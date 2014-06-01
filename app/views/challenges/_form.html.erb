@@ -47,7 +47,7 @@
   </div>
 
 
-   <% if current_user.recipient.blank? %>
+   
       <br>
 
     <h1>Bank Account Information</h1>
@@ -64,7 +64,8 @@
       <%= label_tag :account_number %>
       <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
     </div>
-    <% end %>
+ 
+    
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>
   </div>

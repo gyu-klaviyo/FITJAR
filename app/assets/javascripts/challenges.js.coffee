@@ -5,7 +5,7 @@ jQuery ->
 challenge =
   setupForm: ->
     $('#new_challenge').submit ->
-    if $('input').length > 6
+ 
           $('input[type=submit]').attr('disabled', true)
           Stripe.bankAccount.createToken($('#new_challenge'), challenge.handleStripeResponse)
           false

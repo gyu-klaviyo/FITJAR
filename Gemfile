@@ -17,6 +17,7 @@ gem 'devise'
 gem 'stripe'
 gem 'will_paginate','~>3.0'
 gem 'will_paginate-bootstrap'
+gem 'acts_as_commentable_with_threading'
 
 
 group :production do

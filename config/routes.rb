@@ -1,5 +1,7 @@
 Fitjar::Application.routes.draw do
   
+  resources :questions
+
 #include payment id in the URL "do"
   devise_for :users
   resources :challenges do
@@ -9,6 +11,7 @@ Fitjar::Application.routes.draw do
   get "pages/about"
   get "pages/contact"
   get "pages/blog"
+  get "pages/landing"
   get 'host' => "challenges#host"
   get 'history' => "payments#history"
 

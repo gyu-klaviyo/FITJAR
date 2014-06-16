@@ -7,5 +7,9 @@ class PagesController < ApplicationController
 
   def blog
   end
+
+  def landing
+  end
+
 end
 

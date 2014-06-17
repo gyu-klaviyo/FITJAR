@@ -1,0 +1,39 @@
+<% if comment.parent_id.blank? %>
+  <div class="comment">
+<% else %>
+  <div class="comment response">
+<% end %>
+
+  <% if (current_user == comment.user) || (current_user.try(:admin?)) %>
+    <h4>
+      <%= link_to "×", comment_path(comment), :method => :delete, :remote => true, data: { confirm: "Are you sure you want to delete this comment?", disable_with: "×" }, class: "close" %>
+    </h4>
+  <% end %>
+
+  <small>
+    <%= "Posted #{time_ago_in_words(comment.created_at)} ago by" %>
+    <% if comment.user.present? && comment.user.admin? %>
+      <span id="admin">
+    <% else %>
+      <span id="name">
+    <% end %>
+      <%= "#{comment.user_name}" %>
+    </span>
+  </small>
+  <p class="etsycomment"><%= h(comment.body).gsub(/\n/, '<br/>').html_safe %></p>
+
+  <% if user_signed_in? %>
+    <div class="reply">
+      <p class="reply-link"><%= link_to "Reply", '#', remote: true %></p>
+
+      <div class="reply-form" style="display:none">
+        <%= render partial: 'comments/form', locals: { comment: @new_comment, parent_id: comment.id } %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if comment.has_children? %>
+    <%= render(:partial => 'comments/comment', collection: comment.children, as: :comment) %>
+  <% end %>
+
+</div>

@@ -13,11 +13,21 @@ class ChallengesController < ApplicationController
   # GET /challenges.json
   def index
     @challenges = Challenge.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4 )
+    @comments = Comment.where(commentable_type: "Challenge").find(:all, limit: 15, order: 'created_at DESC')
   end
 
   # GET /challenges/1
   # GET /challenges/1.json
   def show
+    #@comments = @question.root_comments.order('created_at DESC')
+    #@new_comment = Comment.build_from(@question, current_user, "")
+    #@challenge = Challenge.find(params[:id])
+    #@user_who_commented = @current_user
+    #@comment = Comment.build_from( @challenge, @user_who_commented.id, "Hey guys this is my comment!" )
+    #@challenge = Challenge.all
+    #@questions = @challenge.root_comments
+    #@comments = @challenge.root_comments.order('created_at DESC')
+    #@new_comment = Comment.build_from(@challenge, current_user, "")
   end
 
   # GET /challenges/new
@@ -95,7 +105,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :description, :stake, :duration, :image)
+      params.require(:challenge).permit(:name, :last_name, :details, :subject, :description, :stake, :duration, :image)
     end
 
     #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

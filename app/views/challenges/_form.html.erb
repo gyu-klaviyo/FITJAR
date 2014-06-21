@@ -22,6 +22,23 @@
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
+<div class="form-group">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :subject %>
+    <%= f.text_field :subject, class: "form-control", autofocus: true,
+        placeholder: 'Example: Do I need to learn to code in Ruby before starting Ruby on Rails?' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_area :details, class: "form-control",
+        placeholder: "Optional: I've never programmed before and come from a non-technical, marketing background." %>
+  </div>
+  
 <!-- JQ                        ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME-->
 
   <div class="form-group">
@@ -37,7 +54,6 @@
     <%= f.text_field :duration, class: "form-control" %>
   </div>
 
- 
 
 
 <!-- JQ            ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME; DO DATE DURATION 7, 21, OR 30 DAY CHALLENGE-->

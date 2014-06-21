@@ -1,14 +1,18 @@
 Fitjar::Application.routes.draw do
   
+  resources :questions
+
 #include payment id in the URL "do"
   devise_for :users
   resources :challenges do
+  resources :comments, :only => [:create, :destroy]
   resources :payments, only: [:new, :create]
   end
 
   get "pages/about"
   get "pages/contact"
   get "pages/blog"
+  get "pages/landing"
   get 'host' => "challenges#host"
   get 'history' => "payments#history"
 

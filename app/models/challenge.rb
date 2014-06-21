@@ -11,13 +11,20 @@ class Challenge < ActiveRecord::Base
         :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
         :path => ":style/:id_:filename"
   	end
-		validates :name, :description, :stake, presence: true
+		validates :name, :last_name, :details, :subject, :description, :stake, presence: true
   		validates :stake, numericality: { greater_than: 0 }
   		validates_attachment_presence :image
 
-#JQ belongs to HOST
-  	belongs_to :user
+#JQ belongs to HOST - added "has many comments"
+  	acts_as_commentable
+
+    belongs_to :user
     has_many :payments
+    has_many :comments
+    has_many :questions
+    
+
+
 end
 
 

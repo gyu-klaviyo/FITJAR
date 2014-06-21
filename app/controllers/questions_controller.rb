@@ -19,8 +19,11 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
+<<<<<<< HEAD
 #JQ????
     #@challenge = Challenge.find(params[:challenge_id])
+=======
+>>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
   end
 
   # GET /questions/1/edit

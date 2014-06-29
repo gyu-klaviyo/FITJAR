@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140620004940) do
-=======
-ActiveRecord::Schema.define(version: 20140616231438) do
->>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
+#=======
+#ActiveRecord::Schema.define(version: 20140616231438) do
+#>>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -47,11 +47,9 @@ ActiveRecord::Schema.define(version: 20140616231438) do
     t.integer  "rgt"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.string   "user_name"
     t.integer  "challenge_id"
-=======
->>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
+
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
@@ -93,10 +91,8 @@ ActiveRecord::Schema.define(version: 20140616231438) do
     t.string   "name"
     t.string   "recipient"
     t.boolean  "admin"
-<<<<<<< HEAD
     t.string   "last_name"
-=======
->>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
+
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

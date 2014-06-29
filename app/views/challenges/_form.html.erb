@@ -22,22 +22,23 @@
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
-<div class="form-group">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name, class: "form-control" %>
-  </div>
-
-<div class="form-group">
-    <%= f.label :subject %>
-    <%= f.text_field :subject, class: "form-control", autofocus: true,
-        placeholder: 'Example: Do I need to learn to code in Ruby before starting Ruby on Rails?' %>
-  </div>
-  
+<!--
   <div class="form-group">
-    <%= f.label :details %>
-    <%= f.text_area :details, class: "form-control",
-        placeholder: "Optional: I've never programmed before and come from a non-technical, marketing background." %>
-  </div>
+    <%#= f.label #:name %><br>
+    <%#= f.check_box #:name %>
+
+conditional ratio buttons
+    <%#= f.radio_button #:condition, "New", checked: true %> New
+    <%#= f.radio_button #:condition, "Rusty" %> Rusty
+    <%#= f.radio_button #:condition, "Broken" %> Broken
+
+  <%#= f.select #:condition, ["Rusty", "Broken", "New"] %>
+     </div>
+-->
+
+
+
+
   
 <!-- JQ                        ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME-->
 
@@ -45,13 +46,29 @@
     <%= f.label :description %><br>
     <%= f.text_area :description, class: "form-control" %>
   </div>
- <div class="form-group">
+
+  
+  <div class="form-group">
     <%= f.label :stake %><br>
     <%= f.text_field :stake, class: "form-control" %>
+    
+    <%= f.label :description %><br>
+    <%= f.email_field :description , class: "form-control"%>
+
   </div>
+
   <div class="form-group">
+    <%#= f.label :duration %><br>
+    <%#= f.text_field :duration, class: "form-control" %>
+
     <%= f.label :duration %><br>
-    <%= f.text_field :duration, class: "form-control" %>
+    <%= f.range_field :duration %>
+
+     <%= f.radio_button :duration, "7 Day", checked: true %> 7 Day
+    <%= f.radio_button :duration, "14 Day" %> 14 Day
+    <%= f.radio_button :duration, "21 Day" %> 21 Day
+
+  <%= f.select :duration, ["Rusty", "Broken", "New"] %>
   </div>
 
 

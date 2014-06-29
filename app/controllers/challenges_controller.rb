@@ -1,13 +1,19 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:show, :edit, :update, :destroy]
+  before_action :set_challenge, only: [:show, :edit, :update, :destroy, :get_questions]
   before_filter :authenticate_user!, only: [:host, :new, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
+  
 
 #JQ I need to re-define this host not just as a current user signed in by higher authority than a regular user
 
   def host
     @challenges = Challenge.where(user: current_user).order("created_at DESC")
   end
+
+  #def get_questions
+    #@questions = Questions.find(params[:questions_id])
+    #@challenge = @question.challenge.find(params[:id])
+  #end
 
   # GET /challenges
   # GET /challenges.json
@@ -19,15 +25,32 @@ class ChallengesController < ApplicationController
   # GET /challenges/1
   # GET /challenges/1.json
   def show
+    @challenges = Challenge.all
+    #try this one:
+    #@challenge=Challenge.all.find(params[:challenge_id])
+    #@question = @challenge.question.find(params[:id])
+
+    #@root_comments = @questions.root_comments
     #@comments = @question.root_comments.order('created_at DESC')
     #@new_comment = Comment.build_from(@question, current_user, "")
+
+    #@comments = @question.root_comments.order('created_at DESC')
+    #@new_comment = Comment.build_from(@question, current_user, "")
+    
+    #VERSION FROM GITHUB, THEY USE ARTICLE AS EXAMPLE
     #@challenge = Challenge.find(params[:id])
     #@user_who_commented = @current_user
     #@comment = Comment.build_from( @challenge, @user_who_commented.id, "Hey guys this is my comment!" )
-    #@challenge = Challenge.all
+    
     #@questions = @challenge.root_comments
+    
+    #ALEX chap
+    #@challenge = Challenge.all
     #@comments = @challenge.root_comments.order('created_at DESC')
     #@new_comment = Comment.build_from(@challenge, current_user, "")
+
+    #ALEX QUES CONTROL
+    
   end
 
   # GET /challenges/new
@@ -105,7 +128,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :last_name, :details, :subject, :description, :stake, :duration, :image)
+      params.require(:challenge).permit(:name, :details, :subject, :description, :stake, :duration, :image)
     end
 
     #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

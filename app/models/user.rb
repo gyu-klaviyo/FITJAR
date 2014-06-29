@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :name, :last_name, presence: true
+  validates :name, presence: true
 #JQ - should have only 1 challenge, change later!
   has_many :challenges, dependent: :destroy
   has_many :history, class_name: "payment", foreign_key: "player_id"

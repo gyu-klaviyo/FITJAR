@@ -15,15 +15,25 @@ class QuestionsController < ApplicationController
     @comments = @question.root_comments.order('created_at DESC')
     @new_comment = Comment.build_from(@question, current_user, "")
   end
+#class WeaponsController < ApplicationController
+ # def toggle_condition
+  #  @weapon = Weapon.find(params[:id]) 
+   # @weapon.toggle_condition 
+    #respond_to do |format|
+     # format.html { redirect_to @weapon, notice: 'Changed condition' }
+      #format.js 
+    #end
+  #end
+#end
 
   # GET /questions/new
   def new
     @question = Question.new
-<<<<<<< HEAD
+
 #JQ????
     #@challenge = Challenge.find(params[:challenge_id])
-=======
->>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
+
+
   end
 
   # GET /questions/1/edit

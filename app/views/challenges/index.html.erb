@@ -1,40 +1,62 @@
-<h1>ARENA</h1>
-<h2>Let The Games Begin!</h2>
+<div class="container">
+  <div class="center">
+  <h1>ARENA</h1>
+  <h2>Let The Games Begin!</h2>
+  </div>
 
-<div class="center">
-  <div class="row">
-    <% @challenges.each do |challenge| %>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <%= link_to image_tag(challenge.image.url), challenge%>
-          <%= image_tag challenge.image.url %>
-          <div class="caption">
-            <h3><%= challenge.name %></h3>
-            <h3><%= "Hosted by #{challenge.user.name}" %></h3>
+  <div class="center">
+    <div class="row">
+      <% @challenges.each do |challenge| %>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <%= link_to image_tag(challenge.image.url), challenge%>
+            <%= image_tag challenge.image.url %>
+            <div class="caption">
+              <h3><%= challenge.name %></h3>
+              <h3><%= "Hosted by #{challenge.user.name}" %></h3>
+
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 
+  <div class="center">
+  <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+  <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+  </div>  
 
+  <div class="center">
+    <%= will_paginate @posts,renderer: BootstrapPagination::Rails %>
+  </div>
+  <br>
+  <!--switch this to button after-->
 
-  
-
-<div class="center">
-  <%= will_paginate @posts,renderer: BootstrapPagination::Rails %>
-</div>
-<br>
-<!--switch this to button after-->
-
-    <% if user_signed_in? %>
-      <%= link_to new_challenge_path, class: "btn btn-primary", data: {no_turbolink: true} do %>
-      <i class ="glyphicon glyphicon-plus"></i> New Challenge
+      <% if user_signed_in? %>
+        <%= link_to new_challenge_path, class: "btn btn-primary", data: {no_turbolink: true} do %>
+        <i class ="glyphicon glyphicon-plus"></i> New Challenge
+        <%end%>
       <%end%>
-    <%end%>
-    <%#= link_to 'New challenge', new_challenge_path, class: "btn btn-primary", data: { no_turbolink: true } %>
-   
+      <%#= link_to 'New challenge', new_challenge_path, class: "btn btn-primary", data: { no_turbolink: true } %>
+   </div>
 <br>
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

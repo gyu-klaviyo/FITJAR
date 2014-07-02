@@ -9,12 +9,28 @@ Fitjar::Application.routes.draw do
   resources :payments, only: [:new, :create]
   end
 
-  get "pages/about"
-  get "pages/contact"
-  get "pages/blog"
-  get "pages/landing"
+  #get "pages/about"
+  #get "pages/contact"
+  #get "pages/blog"
+  #get "pages/landing"
+  #get "pages/faq"
+  #get "pages/rules"
+  #get "pages/terms"
+  #get 'host' => "challenges#host"
+  #get 'history' => "payments#history"
+
+  #root 'challenges#index'
+
+  get 'faq' => 'pages#faq'
+  #get 'testimonial' => 'pages#testimonial'
+  get 'about' => 'pages#about'
+  get 'rules' => 'pages#rules'
+  get 'home' => 'pages#home'
   get 'host' => "challenges#host"
   get 'history' => "payments#history"
+
+
+
 
   root 'challenges#index'
   # The priority is based upon order of creation: first created -> highest priority.

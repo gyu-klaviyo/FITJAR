@@ -16,10 +16,11 @@
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <ul class="nav navbar-nav navbar-right">
-        <li><div class="fb-like" "right" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></li>
-      <li><%= link_to "Questions", questions_path %></li>
-            <li> <%= render 'layouts/facebook' %></li>
-    <% if user_signed_in? %>
+        <li><div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></li>
+
+      <li><%= link_to "Temp: Questions", questions_path %></li>
+       <li><%= link_to "Temp: Challenges", challenges_path %></li>
+                <% if user_signed_in? %>
       
 
       <li class="dropdown">

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="center">
-  <h1>ARENA</h1>
+  <h1>Welcome to the Arena</h1>
   <h2>Let The Games Begin!</h2>
   </div>
 
@@ -22,6 +22,7 @@
     </div>
   </div>
 
+  
   <div class="center">
   <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
   <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
@@ -34,12 +35,14 @@
   <!--switch this to button after-->
 
       <% if user_signed_in? %>
-        <%= link_to new_challenge_path, class: "btn btn-primary", data: {no_turbolink: true} do %>
-        <i class ="glyphicon glyphicon-plus"></i> New Challenge
-        <%end%>
+        <div class="center">
+          <%= link_to new_challenge_path, class: "btn btn-primary", data: {no_turbolink: true} do %>
+          <i class ="glyphicon glyphicon-plus"></i> New Challenge
+          <%end%>
       <%end%>
+       </div>
       <%#= link_to 'New challenge', new_challenge_path, class: "btn btn-primary", data: { no_turbolink: true } %>
-   </div>
+ </div>
 <br>
 <br>
 <br>

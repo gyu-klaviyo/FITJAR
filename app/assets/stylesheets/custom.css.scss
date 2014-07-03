@@ -1,9 +1,22 @@
 @import "bootstrap";
+@font-family-base
 
 body {
   background-color: #F9FAFA;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.accepted{
+background-image: url('https://dl.dropboxusercontent.com/s/5qqobps6h75jy9i/guy%20with%20abs%20%281%29.jpg');
+height:280px;
+width:1210px;
+
+position: absolute;
+display:block;
+outline:none;
+
 }
 
 .jumbotron {
@@ -19,6 +32,11 @@ body {
 }
 
 
+
+.fb-like{
+  text-align: right;
+}
+
 .site-footer{
 
    left:0px;
@@ -27,6 +45,7 @@ body {
    width:100%;
    background:#000000;
    padding:0px 16px 0px 16px;
+  margin:0px 25px 0px 25px;
 }
 
 .carousel-inner {

@@ -12,8 +12,8 @@ Fitjar::Application.routes.draw do
   #get "pages/about"
   #get "pages/contact"
   #get "pages/blog"
-  #get "pages/landing"
-  #get "pages/faq"
+
+
   #get "pages/rules"
   #get "pages/terms"
   #get 'host' => "challenges#host"
@@ -24,9 +24,11 @@ Fitjar::Application.routes.draw do
   get 'faq' => 'pages#faq'
   #get 'testimonial' => 'pages#testimonial'
   get 'about' => 'pages#about'
+  get 'challenges' => 'challenges#index'
   get 'rules' => 'pages#rules'
   get 'home' => 'pages#home'
   get 'host' => "challenges#host"
+  get 'terms' => "pages#terms"
   get 'history' => "payments#history"
 
 

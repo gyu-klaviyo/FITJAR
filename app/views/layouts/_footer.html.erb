@@ -1,41 +1,21 @@
-  <footer class="site-footer">
-	<div class="container">
-		<div class="center-block">
-			<ul><a href="/pages/about">About</a></ul>
-			<ul><a href="/pages/blog">Blog</a></ul>
-			<ul><a href="/pages/terms">Terms & Privacy</a></ul>
-			<ul><a href="/pages/blog">Blog</a></ul>
-			<ul><a href="mailto:hello@fitjar.co">Contact</a></ul>	
-		</div>
-		
-		<div class="pull-right">
-			
-			</ul>
-				<input type="email" placeholder="Join Email List">
-  				<button type="button" class="btn btn-danger">Submit</button>
-		</div>
 
-   <li> <%= render 'layouts/facebook' %></li>
+	<footer class="site-footer">
+		<div class="container">
+			<div class="footer-links center">
+				<%= link_to "About us", about_path %>
+				<%= link_to "FAQ", faq_path %>
+				<%= link_to "Rules", rules_path %>
 
-		
-	
-</footer>
-
-<footer class="site-footer">
-	<div class="container">
-		<div class="footer-links center">
-			<%= link_to "About us", about_path %>
-			<%= link_to "FAQ", faq_path %>
-			<%= link_to "Rules", rules_path %>
-
-			<%= mail_to "jackson@fitjar.co" do %>
-			  Contact
-			<% end %>
+				<%= mail_to "hello@fitjar.co" do %>
+				  Contact
+				<% end %>
+			</div>
+			<div class="social center">
+				<%= link_to image_tag("https://dl.dropboxusercontent.com/s/onv8sst20hjsqrn/twitter.png"), "http://www.twitter.com/theFITJAR" %>
+				<%= link_to image_tag("https://dl.dropboxusercontent.com/s/99aqgtpqitvo9vs/facebook.png"), "https://www.facebook.com/thefitjar" %>
+			</div>
+			<p class="copyright center">Copyright © 2014 VICEJAR LLC</p>
 		</div>
-		<div class="social center">
-			<%= link_to image_tag("https://dl.dropboxusercontent.com/s/onv8sst20hjsqrn/twitter.png"), "http://www.twitter.com/theFITJAR" %>
-			<%= link_to image_tag("https://dl.dropboxusercontent.com/s/99aqgtpqitvo9vs/facebook.png"), "https://www.facebook.com/thefitjar" %>
-		</div>
-		<p class="copyright center">Copyright © 2014 VICEJAR LLC</p>
-	</div>
-</footer>
+	</footer>
+
+

@@ -7,29 +7,28 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-   
     </button>
 
-
-    <a class="navbar-brand" href="/">FITJAR</a>
+    <a class="navbar-brand" href="https://dl.dropboxusercontent.com/s/u51prm6l5n6wzbi/Logo-Jar.jpg"></a>
+    <ul><a class="navbar-brand" href="/">FITJAR</a></ul>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <ul class="nav navbar-nav navbar-right">
         <li><div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></li>
 
-      <li><%= link_to "Temp: Questions", questions_path %></li>
+    
        <li><%= link_to "Temp: Challenges", challenges_path %></li>
-                <% if user_signed_in? %>
-      
+       <li><a href="#"> Jar <span class="badge">$42</span></a></li>
 
+ 
+      
+    <% if user_signed_in? %>  
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %> <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Purchase History", history_path %></li>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-            <li><%= link_to "Manage Listings", host_path %></li>
-            <li><%= link_to "Sales History", history_path %></li>
+            <li><%= link_to "History", history_path %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           </ul>
       </li>

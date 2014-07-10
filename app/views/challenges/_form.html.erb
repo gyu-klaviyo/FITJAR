@@ -1,109 +1,106 @@
-<%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
-  <% if @challenge.errors.any? %>
-    <div id="error_explanation"class="alert alert-danger alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
+<div class="container"
+  <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
+    <% if @challenge.errors.any? %>
+      <div id="error_explanation"class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
 
-      <ul>
-      <% @challenge.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @challenge.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+         <div id="stripe_error" class="alert alert-danger" style="display:none">
+          <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+        </div>
+ 
+
+    <div class="form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
-  <% end %>
 
-       <div id="stripe_error" class="alert alert-danger" style="display:none">
-        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+  <!--
+    <div class="form-group">
+      <%#= f.label #:name %><br>
+      <%#= f.check_box #:name %>
+
+  conditional ratio buttons
+      <%#= f.radio_button #:condition, "New", checked: true %> New
+      <%#= f.radio_button #:condition, "Rusty" %> Rusty
+      <%#= f.radio_button #:condition, "Broken" %> Broken
+
+    <%#= f.select #:condition, ["Rusty", "Broken", "New"] %>
+       </div>
+  -->
+
+
+
+
+    
+  <!-- JQ                        ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME-->
+
+    <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+
+    
+    <div class="form-group">
+      <%= f.label :stake %><br>
+      <%= f.text_field :stake, class: "form-control" %>
+      
+    
+
+    </div>
+
+    <div class="form-group">
+    <input type="date" class="form-control" placeholder="date input">
+      <%#= f.label :duration %><br>
+      <%#= f.text_field :duration, class: "form-control" %>
+
+      <%#= f.label :duration %><br>
+      <%#= f.range_field :duration %>
+
+       <%#= f.radio_button :duration, "7 Day", checked: true %> 7 Day
+      <%#= f.radio_button :duration, "14 Day" %> 14 Day
+      <%#= f.radio_button :duration, "21 Day" %> 21 Day
+
+    <%#= f.select :duration, ["Rusty", "Broken", "New"] %>
+    </div>
+
+
+
+  <!-- JQ            ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME; DO DATE DURATION 7, 21, OR 30 DAY CHALLENGE-->
+
+   <div class="form-group">
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
+      <h1>Bank Account Information</h1>
+
+      <div class="form-group">
+        <%= label_tag :country %>
+        <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :routing_number %>
+        <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :account_number %>
+        <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
       </div>
 
-
-  <div class="form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-
-<!--
-  <div class="form-group">
-    <%#= f.label #:name %><br>
-    <%#= f.check_box #:name %>
-
-conditional ratio buttons
-    <%#= f.radio_button #:condition, "New", checked: true %> New
-    <%#= f.radio_button #:condition, "Rusty" %> Rusty
-    <%#= f.radio_button #:condition, "Broken" %> Broken
-
-  <%#= f.select #:condition, ["Rusty", "Broken", "New"] %>
-     </div>
--->
-
-
-
-
-  
-<!-- JQ                        ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME-->
-
-  <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-
-  
-  <div class="form-group">
-    <%= f.label :stake %><br>
-    <%= f.text_field :stake, class: "form-control" %>
-    
-    <%= f.label :description %><br>
-    <%= f.email_field :description , class: "form-control"%>
-
-  </div>
-
-  <div class="form-group">
-    <%#= f.label :duration %><br>
-    <%#= f.text_field :duration, class: "form-control" %>
-
-    <%= f.label :duration %><br>
-    <%= f.range_field :duration %>
-
-     <%= f.radio_button :duration, "7 Day", checked: true %> 7 Day
-    <%= f.radio_button :duration, "14 Day" %> 14 Day
-    <%= f.radio_button :duration, "21 Day" %> 21 Day
-
-  <%= f.select :duration, ["Rusty", "Broken", "New"] %>
-  </div>
-
-
-
-<!-- JQ            ADD LAST NAME; THERE IS A BUG HERE IF YOU PUT ONE NAME; DO DATE DURATION 7, 21, OR 30 DAY CHALLENGE-->
-
- <div class="form-group">
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-
-
-   
-      <br>
-
-    <h1>Bank Account Information</h1>
-
+        <br>
+      
     <div class="form-group">
-      <%= label_tag :country %>
-      <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
+      <%= f.submit class: "btn btn-primary" %>
     </div>
-    <div class="form-group">
-      <%= label_tag :routing_number %>
-      <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
-    </div>
-    <div class="form-group">
-      <%= label_tag :account_number %>
-      <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
-    </div>
- 
-    
-  <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
 
+  <% end %>
 
-<% end %>
-
-
+</div>

@@ -16,6 +16,7 @@
 
           
                 <!-- Button trigger modal -->
+                 
                   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                     Launch demo modal
                   </button>
@@ -93,26 +94,28 @@
      
       <br>
        <br>
-    <% if current_user == @challenge.user %>
+  
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <% if current_user == @challenge.user %>
+      <%= link_to 'Edit', edit_challenge_path(@challenge) %>
+      <% end %>
+    </label>
+
+    <label class="btn btn-primary">
+    <%= link_to 'Back', challenge_path %>
+    </label>
+  </div>
+
+
       <%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
-    <% end %>
+   
 
     <%= link_to 'Back', challenge_path, class: "btn btn-link" %>
     </div>
   </div>
 
-    <div class="btn-group" data-toggle="buttons">
-    
-    <label class="btn btn-primary active">
-      <input type="checkbox" checked> EDIT CHALLENGE (Host Only)
-    </label>
-    <label class="btn btn-primary">
-      <input type="checkbox"> Option 2
-    </label>
-    <label class="btn btn-primary">
-      <input type="checkbox"> Option 3
-    </label>
-  </div>
+
 
     <br>
     <br>

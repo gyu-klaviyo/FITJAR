@@ -29,11 +29,8 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
-
-#JQ????
-    #@challenge = Challenge.find(params[:challenge_id])
-
-
+#JQ - per video when we created a payment with new challenge, we also gave it a challenge ID in the sql column
+    @challenge = Challenge.find(params[:challenge_id])
   end
 
   # GET /questions/1/edit
@@ -46,6 +43,10 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     @question.user_id = current_user.id
     @question.user_name = current_user.name
+    @challenge = Challenge.find(params[:challenge_id])
+#JQ - per video when we created a payment with new challenge, we also gave it a challenge ID in the sql column
+
+
 
     respond_to do |format|
       if @question.save

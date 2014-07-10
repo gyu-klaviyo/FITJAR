@@ -71,6 +71,7 @@ class ChallengesController < ApplicationController
     #take user id and assign to host if user created=HOST...else user END
     @challenge.user_id = current_user.id
 
+#move this to DEVISE edit user profile.  You don't want users to put in their bank info in the begining of creating a challenge
     if current_user.recipient.blank?
       Stripe.api_key = ENV["STRIPE_API_KEY"]
       token = params[:stripeToken]

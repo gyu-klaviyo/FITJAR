@@ -5,8 +5,10 @@ class PaymentsController < ApplicationController
   # GET /payments.json
   
   #mistook ORDER for the order "method"
- def history
+  def history
     @payments = Payment.all.where(host: current_user).order("created_at DESC")
+#just added, you need to show history and add a new colmn, wheter they were a host or player and show ALL history
+    @payments = Payment.all.where(player: current_user).order("created_at DESC")
   end
 
 
@@ -14,6 +16,7 @@ class PaymentsController < ApplicationController
   # GET /payments/new
   def new
     @payment = Payment.new
+        #tells you to find the id in the URL/also in "def create"
     @challenge = Challenge.find(params[:challenge_id])
   end
 
@@ -47,7 +50,7 @@ class PaymentsController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
-#stripe bank transfer begins
+#stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
 
  transfer = Stripe::Transfer.create(
       :amount => (@challenge.stake * 95).floor,

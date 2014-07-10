@@ -7,6 +7,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*COLOR STUFF THIS SECTION IS TO DESSIGN THE SECTION BETWEEN THE OLD AND THE NEW*/
+
+.btn-outline-inverse {
+color: #fff;
+background-color: transparent;
+border-color: #ff0000;
+}
+
+.btn-outline {
+color: #563d7c;
+background-color: transparent;
+border-color: #ff0000;
+}
 
 .accepted{
 background-image: url('https://dl.dropboxusercontent.com/s/5qqobps6h75jy9i/guy%20with%20abs%20%281%29.jpg');
@@ -19,22 +32,37 @@ outline:none;
 
 }
 
+.container-black{
+color: #FFFFFF;
+background-color: #111111;
+border-color: #ff0000;
+
+}
+
 .jumbotron {
   background-image: url('https://dl.dropboxusercontent.com/s/5qqobps6h75jy9i/guy%20with%20abs%20%281%29.jpg');
-  h1, h2 {
-  font-family: helvetica, georgia, san-serif;
-  padding: 20px;
+  height:480px;
+  h1{
+      font-family: open sans, san-serif;
+        color: #FFFFFF;
+   
+  }
+
+  h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
   margin: 0 auto;
   word-spacing: 5px;
   font-weight: 100;
   color: #FFFFFF;
   }
+
 }
 
 
 
 .fb-like{
-  text-align: right;
+  float: right;
 }
 
 .site-footer{
@@ -42,26 +70,16 @@ outline:none;
    left:0px;
    bottom:0px;
    height:120px;
-   width:100%;
+   width:1437px;
    background:#000000;
    padding:0px 16px 0px 16px;
   margin:0px 25px 0px 25px;
 }
 
-.carousel-inner {
-  
- h1, h2 {
-    /*font-family: helvetica, georgia, san-serif;*/
-    font-family: 'Oswald', sans-serif;
-    max-width: 500px;
-      padding: 20px;
-      margin: 0 auto;
-  }
-
-}
 
 .navbar-default {
   background-color: #111111;
+
 }
 
 .navbar-default .navbar-brand {
@@ -70,6 +88,7 @@ outline:none;
   font-weight: 400;
   color: #FFFFFF;
   font-size: 30px;
+
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -77,6 +96,7 @@ outline:none;
   font-size: 14px;
   font-weight: bold;
   color: #0192B5;
+  background-color: #111111;
 }
 
 .center {

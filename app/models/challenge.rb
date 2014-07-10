@@ -11,7 +11,7 @@ class Challenge < ActiveRecord::Base
         :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
         :path => ":style/:id_:filename"
   	end
-		validates :name, :last_name, :details, :subject, :description, :stake, presence: true
+		validates :name, :description, :stake, presence: true
   		validates :stake, numericality: { greater_than: 0 }
   		validates_attachment_presence :image
 
@@ -23,7 +23,15 @@ class Challenge < ActiveRecord::Base
     has_many :comments
     has_many :questions
     
+    #JQ the ideanot sure what I did here!!!
+  def payments_sum
+    challenge_payments.sum(:value)
+  end
 
+  class  ChallengePayments < ActiveRecord::Base
+    belongs_to :challenge
+    validates_inclusion_of :value, :in => [-1,1]
+  end
 
 end
 

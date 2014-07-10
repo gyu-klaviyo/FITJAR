@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-#<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140620004940) do
-#=======
-#ActiveRecord::Schema.define(version: 20140616231438) do
-#>>>>>>> 6aecc5ee9f1e8661fe1c4eb416b66e9d5e4f76c9
+ActiveRecord::Schema.define(version: 20140704063639) do
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -33,6 +29,8 @@ ActiveRecord::Schema.define(version: 20140620004940) do
     t.string   "comments"
     t.string   "subject"
     t.string   "details"
+    t.integer  "pool"
+    t.boolean  "status"
   end
 
   create_table "comments", force: true do |t|
@@ -49,7 +47,6 @@ ActiveRecord::Schema.define(version: 20140620004940) do
     t.datetime "updated_at"
     t.string   "user_name"
     t.integer  "challenge_id"
-
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
@@ -64,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140620004940) do
     t.integer  "player_id"
     t.integer  "host_id"
     t.integer  "challenge_id"
+    t.integer  "balance"
   end
 
   create_table "questions", force: true do |t|
@@ -73,6 +71,7 @@ ActiveRecord::Schema.define(version: 20140620004940) do
     t.string   "details"
     t.integer  "user_id"
     t.string   "user_name"
+    t.string   "challenge_id"
   end
 
   create_table "users", force: true do |t|
@@ -92,7 +91,6 @@ ActiveRecord::Schema.define(version: 20140620004940) do
     t.string   "recipient"
     t.boolean  "admin"
     t.string   "last_name"
-
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

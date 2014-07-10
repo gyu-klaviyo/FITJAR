@@ -5,7 +5,12 @@
   </head>
 
   <body>
-    <div class="container">
+ 
+    
+  <%= render 'layouts/facebook' %>
+  <%= render 'layouts/header' %>
+
+     <div class="container">
       <% flash.each do |name, msg| %>
         <% if msg.is_a?(String) %>
           <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
@@ -16,8 +21,6 @@
       <% end %>
     </div>
     
-  <%= render 'layouts/facebook' %>
-  <%= render 'layouts/header' %>
     <%= yield %>
   <%= render 'layouts/footer' %>
   </body>

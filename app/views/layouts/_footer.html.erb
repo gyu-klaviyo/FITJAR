@@ -1,27 +1,21 @@
 <footer class="site-footer">
 	<div class="container-fluid">
 		<div class="row">
-		  	<div class="col-md-6">
-			  	<ul class="list-inline left">
+				<ul class="list-inline left">
 					<li>© 2014 VICEJAR LLC</li>
 					<li><%= link_to "ABOUT", about_path %></li>
 					<li><%= link_to "FAQ", faq_path %></li>
 					<li><%= link_to "RULES", rules_path %></li>
 					<li><%= link_to "TERMS", terms_path %></li>
+					<li><%= mail_to "hello@fitjar.co" do %>
+						  CONTACT
+						<% end %></li>
 					<li><%= link_to "VICEJAR", "https://www.thevicejar.com" %></li>
-					<%= mail_to "hello@fitjar.co" do %>
-					  Contact
-					<% end %>
 				</ul>
-			</div>
-
-		  	<div class="pull right">
-		  		<ul class="list-inline right">
-		  			<li><%= link_to image_tag("https://dl.dropboxusercontent.com/s/onv8sst20hjsqrn/twitter.png"), "http://www.twitter.com/theFITJAR" %></li>
-					<li><%= link_to image_tag("https://dl.dropboxusercontent.com/s/99aqgtpqitvo9vs/facebook.png"), "https://www.facebook.com/thefitjar" %></li>
-				</ul>
+			<div class="pull-right">
+			  	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_horizontal_follow_toolbox"></div>
 			</div>
 		</div>
-
 	</div>
 </footer>

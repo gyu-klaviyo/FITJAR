@@ -5,11 +5,11 @@
 
   <table class="table table-striped table-bordered">
     <tr>
-      <th class="center">Jar</th>
-      <th class="center">Challenge</th>
-      <th class="center">Stake</th>
-      <th class="center">Host</th>
-      <th class="center">Date Sold</th>
+      <th class="center">JAR</th>
+      <th class="center">CHALLENGE</th>
+      <th class="center">STAKE</th>
+      <th class="center">HOST</th>
+      <th class="center">DATE</th>
     </tr>
 
     <% @payments.each do |payment| %>
@@ -24,16 +24,18 @@
   </table>
 
   <br>
-
   <% if user_signed_in? %>
-     <%= link_to new_challenge_path, class: "btn btn-default btn-lg btn-block", data: {no_turbolink: true} do %>
-          <i class ="glyphicon glyphicon-plus"></i> New Challenge
+     <%= link_to new_challenge_path, class: "btn btn-block btn-lg btn-outline", data: {no_turbolink: true} do %>
+          <i class ="glyphicon glyphicon-plus"></i> NEW CHALLENGE
           <%end%>
   <% end %>
-
 </div>
 
 
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

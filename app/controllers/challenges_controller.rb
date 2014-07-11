@@ -129,7 +129,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :details, :subject, :description, :stake, :duration, :image)
+      params.require(:challenge).permit(:name, :description, :stake, :duration, :image)
     end
 
     #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

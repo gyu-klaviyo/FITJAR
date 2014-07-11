@@ -1,14 +1,13 @@
-<div class="container"
+<div class="container">
   <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
     <% if @challenge.errors.any? %>
       <div id="error_explanation"class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
-
         <ul>
-        <% @challenge.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
+          <% @challenge.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
         </ul>
       </div>
     <% end %>
@@ -47,29 +46,14 @@
       <%= f.label :description %><br>
       <%= f.text_area :description, class: "form-control" %>
     </div>
-
-    
     <div class="form-group">
       <%= f.label :stake %><br>
       <%= f.text_field :stake, class: "form-control" %>
-      
-    
-
     </div>
 
     <div class="form-group">
-    <input type="date" class="form-control" placeholder="date input">
-      <%#= f.label :duration %><br>
-      <%#= f.text_field :duration, class: "form-control" %>
-
-      <%#= f.label :duration %><br>
-      <%#= f.range_field :duration %>
-
-       <%#= f.radio_button :duration, "7 Day", checked: true %> 7 Day
-      <%#= f.radio_button :duration, "14 Day" %> 14 Day
-      <%#= f.radio_button :duration, "21 Day" %> 21 Day
-
-    <%#= f.select :duration, ["Rusty", "Broken", "New"] %>
+      <%= f.label :duration %><br>
+      <%= f.text_field :duration %>
     </div>
 
 

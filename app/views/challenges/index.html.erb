@@ -30,15 +30,17 @@
 <br>
   <br>
   <!--switch this to button after-->
+  <div class="container" style="max-width:400px; margin: 0 auto 10px;">
     <div class="center-block">
       <% if user_signed_in? %>
         <div class="center">
-          <%= link_to new_challenge_path, class: "btn btn-outline btn-lg btn-block ", data: {no_turbolink: true} do %>
+          <%= link_to new_challenge_path, class: "btn btn-warning btn-lg btn-block ", data: {no_turbolink: true} do %>
           <i class ="glyphicon glyphicon-plus"></i> NEW CHALLENGE
           <%end%>
       <%end%>
          </div>
     </div>
+  </div>
 <br>
 <br>
 <br>

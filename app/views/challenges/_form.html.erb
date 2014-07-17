@@ -1,3 +1,124 @@
+<!-- NAME OF CHALLENGE --> 
+<form class="form-horizontal" role="form">
+  <br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">Name Your Challenge:</label>
+    <div class="col-md-3">
+      <input type="text" class="form-control" placeholder="Hell Week!">
+    </div>
+  </div>
+</form>
+
+
+<!-- DATE --> 
+<form class="form-horizontal" role="form">
+  <br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">When Shall We Begin?</label>
+
+    <div class="col-md-2">
+      <input type="date" class="form-control">
+    </div>
+      <div class="col-md-2"><h4><i class="glyphicon glyphicon-calendar"></i></h4></div>
+  </div>
+</form>
+
+<span class="help-block"><em>can change later</em></span>
+
+<form class="form-horizontal" role="form">
+  <br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">How Long You Gonna Play:</label>
+    
+    <div class="col-md-5">
+      <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide">
+      $('.slider').slider()
+    </div>
+  </div>
+</form>
+
+
+<!-- FITNESS TRACKER --> 
+<form class="form-horizontal" role="form">
+  <br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">Fitness Tracker:</label>
+    
+    <div class="col-md-7">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width: col-md-2">
+            FitBit <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Moves</a></li>
+            <li><a href="#">Nike FuelBand</a></li>
+            <li><a href="#">Basis</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Buy One</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</form>
+
+<!-- INVITE OTHERS --> 
+
+<form class="form-horizontal" role="form"><br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">Who Else Is Game?:</label>
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-default" placeholder="gandolph@gmail.com" type="button" for="inputSuccess3">Invite</button>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
+    <div class="col-md-1"><h5>or</h5></div>
+    <div class="col-md-1"><h5>facebook</h5></div>
+  </div>
+</form>
+
+  
+<!-- STAKE -->        
+<form class="form-horizontal" role="form"><br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3">Stake:</label>
+      <div class="col-md-7">
+        <!-- Large button group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            $10 <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">$20</a></li>
+            <li><a href="#">$50</a></li>
+            <li><a href="#">$50</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+            <div class="col-md-5"><input type="number" class="form-control" id="inputSuccess3"></div>
+
+        </div>
+      </div>
+  </div>
+</form>
+
+
+
+    
+<!-- BUTTON -->     
+<form class="form-horizontal" role="form">
+  <br>
+  <div class="form-group has-success has-focus">
+    <label class="control-label col-md-5" for="inputSuccess3"></label>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-success btn-block">GAME ON!</button>
+    </div>
+  </div>
+</form>
+
 <div class="container">
   <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
     <% if @challenge.errors.any? %>
@@ -80,7 +201,7 @@
       </div>
 
         <br>
-      
+        <%= f.submit class: "btn btn-primary" %>
     <div class="form-group">
       <%= f.submit class: "btn btn-primary" %>
     </div>

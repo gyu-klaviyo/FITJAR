@@ -18,7 +18,7 @@ class ChallengesController < ApplicationController
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4 )
+    @challenges = Challenge.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8 )
     @comments = Comment.where(commentable_type: "Challenge").find(:all, limit: 15, order: 'created_at DESC')
   end
 

@@ -14,13 +14,7 @@
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <ul class="nav navbar-nav navbar-right">
-        <li><div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="standard" data-action="like" data-share="true"></div></li>
-
-    
-     
- 
-      
+  <ul class="nav navbar-nav navbar-right">     
     <% if user_signed_in? %>  
       <li><a href="/history">JAR <span class="badge">$42</span></a></li>
       <li class="dropdown">
@@ -28,7 +22,7 @@
           <ul class="dropdown-menu">
             <li class="active"><%= link_to "Edit Profile", edit_user_registration_path %></li>
             <li><%= link_to "The Arena", challenges_path %></li>
-            <li><%= link_to "Account", history_path %></li>
+          
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           </ul>
       </li>

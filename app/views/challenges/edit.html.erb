@@ -1,8 +1,10 @@
 <div class="container">
-	<h1>Editing challenge</h1>
+	<h1 class = "center">Edit Your Challenge</h1><br>
 
 	<%= render 'form' %>
-
-	<%= link_to 'Show', @challenge, class: "btn btn-link" %> |
-	<%= link_to 'Back', challenges_path, class: "btn btn-link" %>
+	
+	<ul class= "pager">
+		<li><%= link_to 'Show', @challenge, class: "btn pager" %></li>
+		<li><%= link_to 'Back', challenges_path, class: "btn btn-link" %></li>
+	</ul>
 </div>

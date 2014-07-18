@@ -1,29 +1,26 @@
 <div class="container">
   <div class="jumbotron">
     <div class="center">
-      <h1>Welcome to the <%= @challenge.name %> Challenge</h1>
-        <h2>
+      <h2>Welcome to <%= @challenge.name %> Challenge
+        <h3>
           <% @challenges.each do |challenge| %>
             <%= "Your host is #{challenge.user.name}" %>
-         
             <%= @challenge.description %> 
-        </h2>
-          
-        <h3>The challenge will be a  of # ending on #.  You must sync with your wearable tech by 3PM each day
+        
+          <%end%>
+        The challenge will be a  of # ending on #.  You must sync with your wearable tech by 3PM each day
         </h3>
 
-          <%end%>
-
-          
+          <br>
                 <!-- Button trigger modal -->
-                 
-                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Launch demo modal
-                  </button>
-                  <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-          <%= link_to "Invite Friends", new_challenge_payment_path(@challenge), class: "btn btn-danger btn-lg", data: { no_turbolink: true } %>
+          <div class="container" style="max-width:400px; margin: 0 auto 10px;">
+            <div class="center-block">
+              <%= link_to "ACCEPT CHALLENGE", new_challenge_payment_path(@challenge), class: "btn btn-outline btn-block ", data: { no_turbolink: true } %>
+             </div>
+          </div>
     </div>
   </div>
+
      
   <table class="table table-bordered">
 
@@ -38,20 +35,6 @@
       </div>
     </div>
   </table>
-
-
-
-
-
-<div class="media">
-  <a class="pull-left" href="#">
-    <img class="media-object" src="..." alt="...">
-  </a>
-  <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
-    ...
-  </div>
-</div>
 
 
     <div class="row">
@@ -93,35 +76,18 @@
       <br>
        <br>
   
-  <div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary active">
-      <% if current_user == @challenge.user %>
-      <%= link_to 'Edit', edit_challenge_path(@challenge) %>
-      <% end %>
-    </label>
-
-    <label class="btn btn-primary">
-    <%= link_to 'Back', challenge_path %>
-    </label>
-  </div>
 
 
-      <%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-link" %> |
-   
-
-    <%= link_to 'Back', challenge_path, class: "btn btn-link" %>
+      <ul class= "pager">
+          <li><%= link_to 'Edit', edit_challenge_path(@challenge)%></li>
+          <li><%= link_to 'Back', challenges_path %></li>
+      </ul>
     </div>
   </div>
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <br>
     <br>
     <br>

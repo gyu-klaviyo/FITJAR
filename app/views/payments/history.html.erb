@@ -1,9 +1,7 @@
 <div class="container">
-    <h2 class="center">Your Challenge History</h2>
-
-<div class="container">
-    <h2>Change Bank Acccount Info</h2>
-  </div>
+    <h2>Your Challenge History</h2>
+<br>
+<br>
 
   <table class="table table-striped">
     <tr>
@@ -26,25 +24,27 @@
       </tr>
     <% end %>
   </table>
-
-  <br>
- <br>
+  
+  
 <br>
 <br>
 <br>
+<br>
+<br>
 
-
-  <div class="container" style="max-width:400px; margin: 0 auto 10px;">
-    <div class="center-block">
-      <% if user_signed_in? %>
-        <div class="center">
-          <%= link_to new_challenge_path, class: "btn btn-warning btn-lg btn-block ", data: {no_turbolink: true} do %>
-          <i class ="glyphicon glyphicon-plus"></i> NEW CHALLENGE
-          <%end%>
-      <%end%>
-         </div>
-    </div>
+  <div class="container">
+    <h2>Change Bank Acccount Info</h2><br>
+    <%= render 'formBank' %>
   </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
 </div>
 <br>
 <br>

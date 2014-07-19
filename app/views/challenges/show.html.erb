@@ -1,37 +1,67 @@
-<div class="container">
-  <div class="jumbotron">
-    <div class="center">
-      <h2>Welcome to <%= @challenge.name %> Challenge
-        <h3>
-          <% @challenges.each do |challenge| %>
-            <%= "Your host is #{challenge.user.name}" %>
-            <%= @challenge.description %> 
-        
-          <%end%>
-        The challenge will be a  of # ending on #.  You must sync with your wearable tech by 3PM each day
-        </h3>
+<br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= image_tag @challenge.image.url %>
+        </div>
+      </div>
+      
+      <div class="col-md-8">
+        <h2 class="center"><%= @challenge.name %> Challenge</h2><br>
+          <p>Your host is ______, has set the stage for the challenge below.  Click here to read more about the<button class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                  rules
+                </button>
 
-          <br>
-                <!-- Button trigger modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Rules</h4>
+                      </div>
+                      <div class="modal-body">
+                        <%= render 'pages/rulesPartial' %>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <ul>
+                <li>DESCRIPTION: <%= @challenge.description %></li>
+                <li>STAKE: <%= number_to_currency(@challenge.stake) %></li>
+                <li>DURATION: <%= @challenge.duration %></li>
+                <li>START DATE </li>
+              </ul>
+          </p>  
+  
           <div class="container" style="max-width:400px; margin: 0 auto 10px;">
             <div class="center-block">
-              <%= link_to "ACCEPT CHALLENGE", new_challenge_payment_path(@challenge), class: "btn btn-outline btn-block ", data: { no_turbolink: true } %>
+              <%= link_to "ACCEPT CHALLENGE", new_challenge_payment_path(@challenge), class: "btn btn-primary btn-outline btn-block ", data: { no_turbolink: true } %>
              </div>
           </div>
-    </div>
+      </div>
   </div>
 
+
+
+<br><br><br>
      
   <table class="table table-bordered">
 
     <div class="row">
-      <div class="col-xs-6 col-md-4"><h5>Challenge Name: <%= @challenge.name %><br>Host: Jackson Quach<br>Challenge Date:<br></h5>
+      <div class="col-xs-6 col-md-4"><h4>Challenge Name: <%= @challenge.name %><br>Host: Jackson Quach<br>Challenge Date:<br></h4>
       </div>
       
-      <div class="col-xs-6 col-md-4"><h5>Jar Amount: <%= number_to_currency(@challenge.stake) %></h5>
+      <div class="col-xs-6 col-md-4"><h4>Jar Amount: <%= number_to_currency(@challenge.stake) %></h4>
       </div>
       
-      <div class="col-xs-6 col-md-4"><h5>Start In</h5>
+      <div class="col-xs-6 col-md-4"><h4>Start In</h4>
       </div>
     </div>
   </table>
@@ -64,9 +94,27 @@
 
       </div>
     
-    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  EDIT & SURVEY MONKEY
+        <div class="col-xs-6 col-md-4">
+      
+        <div class="panel-group" id="accordion">
+        
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                   How We Doin?
+                </a>
+              </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+               <p>survey Monkey here</p>
+              </div>
+            </div>
+        </div>
     </div>
+  </div>
+        </div>
 
   <div class="center"></div>
       
@@ -85,8 +133,47 @@
     </div>
   </div>
 
+<!-- PLACEHOLDER, REMOVE LATER -->
 
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
+<!-- Large modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+<!-- Small modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+   
+    </div>
+  </div>
+</div>
 
     <br>
     <br>

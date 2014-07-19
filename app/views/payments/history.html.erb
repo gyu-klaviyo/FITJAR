@@ -1,8 +1,8 @@
 <div class="container">
-    <h2>Your Challenge History</h2>
+    <h2 class="center">Account Infomation</h2>
 <br>
 <br>
-
+<h4>Account History</h4>
   <table class="table table-striped">
     <tr>
       <th class="center">PICTURE</th>
@@ -24,18 +24,45 @@
       </tr>
     <% end %>
   </table>
-  
-  
-<br>
-<br>
-<br>
-<br>
-<br>
 
-  <div class="container">
-    <h2>Change Bank Acccount Info</h2><br>
-    <%= render 'formBank' %>
+  
+<br>
+<br>
+<br>
+<br>
+ 
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Change Credit Card Info
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+       <%= render 'formBank' %>
+      </div>
+    </div>
   </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Change Bank Info
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+      <%= render 'formBank' %>
+      </div>
+    </div>
+  </div>
+  
+</div>
 
 <br>
 <br>

@@ -1,3 +1,25 @@
+
+<div class="container">
+  <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
+    <% if @challenge.errors.any? %>
+      <div id="error_explanation"class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
+        <ul>
+          <% @challenge.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+         <div id="stripe_error" class="alert alert-danger" style="display:none">
+          <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+        </div>
+</div></div>
+
+
+
 <!-- NAME OF CHALLENGE --> 
 <form class="form-horizontal" role="form">
   <br>
@@ -25,14 +47,20 @@
 
 <span class="help-block"><em>can change later</em></span>
 
-<form class="form-horizontal" role="form">
+
+<!-- DURATION = DATE + 7, 21, OR 30 DAYS --> 
+<!-- DURATION = DATE + 7, 21, OR 30 DAYS --> 
+
+  <form class="form-horizontal" role="form">
   <br>
   <div class="form-group has-success has-focus">
-    <label class="control-label col-md-5" for="inputSuccess3">How Long You Gonna Play:</label>
+    <label class="control-label col-md-5" for="inputSuccess3"> <%= f.label :duration %> </label>
     
-    <div class="col-md-5">
-      <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide">
-      $('.slider').slider()
+    <div class="col-md-7">
+        <div class="btn-group">
+          
+          <%= f.select(:duration, options_for_select([['7 DAYS',7], ['21 DAYS',21], ['30 DAYS',30]]), {}, {class: "form-control"}) %>
+        </div>
     </div>
   </div>
 </form>
@@ -119,43 +147,16 @@
   </div>
 </form>
 
-<div class="container">
-  <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
-    <% if @challenge.errors.any? %>
-      <div id="error_explanation"class="alert alert-danger alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
-        <ul>
-          <% @challenge.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-         <div id="stripe_error" class="alert alert-danger" style="display:none">
-          <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-        </div>
- 
 
     <div class="form-group">
       <%= f.label :name %><br>
       <%= f.text_field :name, class: "form-control" %>
     </div>
 
-  <!--
-    <div class="form-group">
-      <%#= f.label #:name %><br>
-      <%#= f.check_box #:name %>
+  
+  
 
-  conditional ratio buttons
-      <%#= f.radio_button #:condition, "New", checked: true %> New
-      <%#= f.radio_button #:condition, "Rusty" %> Rusty
-      <%#= f.radio_button #:condition, "Broken" %> Broken
 
-    <%#= f.select #:condition, ["Rusty", "Broken", "New"] %>
-       </div>
-  -->
 
 
 

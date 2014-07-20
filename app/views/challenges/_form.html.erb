@@ -1,158 +1,105 @@
-  <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
-    <% if @challenge.errors.any? %>
-      <div id="error_explanation"class="alert alert-danger alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
-        <ul>
-          <% @challenge.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-         <div id="stripe_error" class="alert alert-danger" style="display:none">
-          <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-        </div>
-
-
-
-
-    <!-- NAME OF CHALLENGE --> 
-
-    <div class="form-horizontal">
-         <div class="col-md-3">
-           <%= f.label :name %><br>
+      <%= form_for(@challenge, :html => { :multipart => true }) do |f| %>
+        <% if @challenge.errors.any? %>
+          <div id="error_explanation"class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h4><%= pluralize(@challenge.errors.count, "error") %> prohibited this challenge from being saved:</h4>
+            <ul>
+              <% @challenge.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
           </div>
-          <div class="col-md-3">
-            <%= f.text_field :name, :placeholder => "Hell Week!", class: "form-control col-md-5" %>
-          </div>
-    </div>
-<br><br><br><br><br><br>
+        <% end %>
 
-    <form class="form-horizontal" role="form">
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3">Name Your Challenge:</label>
-        <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="xxx"><br><br>
-        </div>
-      </div>
-    </form>
-
-
-    <!-- DATE --> 
-    <form class="form-horizontal" role="form">
-      <br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3">When Shall We Begin?</label>
-
-        <div class="col-md-2">
-          <input type="date" class="form-control">
-        </div>
-          <div class="col-md-2"><h4><i class="glyphicon glyphicon-calendar"></i></h4></div>
-      </div>
-    </form>
-
-     <!-- <span class="help-block"><em>can change later</em></span>--> 
-
-
-    <!-- DURATION = DATE + 7, 21, OR 30 DAYS --> 
-
-      <form class="form-horizontal" role="form">
-      <br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3"> <%= f.label :duration %> </label>
-        
-        <div class="col-md-7">
-            <div class="btn-group">
-              
-              <%= f.select(:duration, options_for_select([['7  Days',7], ['21  Days',21], ['30  Days',30]]), {}, {class: "form-control"}) %>
+             <div id="stripe_error" class="alert alert-danger" style="display:none">
+              <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
             </div>
-        </div>
-      </div>
-    </form>
+    <br><br>
 
-
-    <!-- FITNESS TRACKER --> 
     <form class="form-horizontal" role="form">
-      <br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3">Fitness Tracker:</label>
-        
-        <div class="col-md-7">
-            <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width: col-md-2">
-                FitBit <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Moves</a></li>
-                <li><a href="#">Nike FuelBand</a></li>
-                <li><a href="#">Basis</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Buy One</a></li>
-              </ul>
-            </div>
-        </div>
-      </div>
-    </form>
-
-    <!-- INVITE OTHERS --> 
-
-    <form class="form-horizontal" role="form"><br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3">Who Else Is Game?:</label>
-        <div class="col-lg-3">
-          <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" placeholder="gandolph@gmail.com" type="button" for="inputSuccess3">Invite</button>
-            </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-
-        <div class="col-md-1"><h5>or</h5></div>
-        <div class="col-md-1"><h5>facebook</h5></div>
-      </div>
-    </form>
-
       
-    <!-- STAKE -->        
-    <form class="form-horizontal" role="form"><br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3">Stake:</label>
-          <div class="col-md-7">
-            <!-- Large button group -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                $10 <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">$20</a></li>
-                <li><a href="#">$50</a></li>
-                <li><a href="#">$50</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Other</a></li>
-              </ul>
-                <div class="col-md-5"><input type="number" class="form-control" id="inputSuccess3"></div>
-
+        <div class="container">
+                                              <!-- NAME OF CHALLENGE --> 
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-5 control-label" style="text-align: right">Name Your Challenge:</label>
+            <div class="col-sm-4">
+              <%= f.text_field :name, :placeholder => "Hell Week!", autofocus: true, class: "form-control" %>
             </div>
-          </div>
-      </div>
-    </form>
+          </div><br><br>
 
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">When Shall We Begin?</label>
+              <div class="col-sm-3">
+                <%= f.text_field :start, :placeholder => " mm/dd/yyyy", class: "form-control input-group date datetimepicker5" %>
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span><script type="text/javascript">
+                          $(function () {
+                              $('#datetimepicker5').datetimepicker({
+                                  pickTime: false
+                              });
+                          });
+                      </script>
+              </div>
+          </div><br><br><br><br>
+                                              <!-- DURATION = DATE + 7, 21, OR 30 DAYS --> 
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Duration</label>
+            <div class="col-sm-4">
+                  <div class="btn-group">   
+                    <%= f.select(:duration, options_for_select([['7  Days',7], ['21  Days',21], ['30  Days',30]]), {}, {class: "form-control"}) %>
+                  </div>
+            </div>
+          </div><br><br>
+                                            <!-- WEARABLE DEVICE--> 
+         <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Fitness Tracker</label>
+            <div class="col-sm-4">
+                  <div class="btn-group">   
+                    <%= f.select(:duration, options_for_select([['FitBit',7], ['FuelBand',21], ['Moves',30]]), {}, {class: "form-control"}) %>
+                  </div>
+            </div>
+          </div><br><br>
+                                                   <!-- INVITE OTHERS --> 
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Who Else Is Game?:</label>
+            
+            <div class="col-sm-3">
+              <%= f.text_field :name, class: "form-control" %><span class="input-group-btn">
+                  <button class="btn btn-default" type="button" for="inputSuccess3">Invite</button>
+                </span>
+            </div>
+          
+          </div><br><br>
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Stake</label>
+            <div class="col-sm-4">
+                  <div class="btn-group">   
+                    <%= f.select(:duration, options_for_select([['$0',0], ['$10',10], ['$20',20], ['$50',50], ['$100',100],['Other',0]]), {}, {class: "form-control"}) %>
+                  </div>
+            </div>
+          </div><br><br>
+                                                      <!-- BUTTON -->     
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-5 control-label" style="text-align: right"></label>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <%= f.submit class: "btn btn-success btn-block" %>
+                </div>
+              </div>
+          </div><br><br>
         
-    <!-- BUTTON -->     
-    <form class="form-horizontal" role="form">
-      <br>
-      <div class="form-group has-success has-focus">
-        <label class="control-label col-md-5" for="inputSuccess3"></label>
-        <div class="col-md-3">
-          <button type="button" class="btn btn-success btn-block">GAME ON!</button>
-        </div>
-      </div>
+
+
+
+        </div>  <!--<<<DIV FOR THE CONTAINER -->   
+
+     
     </form>
 
-  <%end%>
+
+
+
+<%end%>
 
 
      

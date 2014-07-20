@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704063639) do
+ActiveRecord::Schema.define(version: 20140719193028) do
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140704063639) do
     t.string   "details"
     t.integer  "pool"
     t.boolean  "status"
+    t.date     "start"
   end
 
   create_table "comments", force: true do |t|

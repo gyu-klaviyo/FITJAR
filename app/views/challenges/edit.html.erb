@@ -3,8 +3,8 @@
 
 	<%= render 'form' %>
 	
-	<ul class= "pager">
-		<li><%= link_to 'Show', @challenge, class: "btn pager" %></li>
-		<li><%= link_to 'Back', challenges_path, class: "btn btn-link" %></li>
-	</ul>
+	 <ul class= "pager">
+           <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
+           
+      </ul>
 </div>

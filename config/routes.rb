@@ -1,6 +1,13 @@
 Fitjar::Application.routes.draw do
   
-
+authenticated :user do
+  root :to => "challenges#index"
+end
+unauthenticated :user do
+  devise_scope :user do 
+    get "/" => "pages#home"
+  end
+end
 
 #include payment id in the URL "do"
   devise_for :users
@@ -35,7 +42,7 @@ Fitjar::Application.routes.draw do
 
 
 
-  root 'pages#home'
+  #root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

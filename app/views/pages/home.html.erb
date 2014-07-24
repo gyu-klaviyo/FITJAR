@@ -1,49 +1,59 @@
-<div class="jumbotron">
-  <div class="container">
-    <div class="center">
-      <h1>GET FIT, GET PAID! </h1>
-      <h2>Make fitness wagers between friends & family <br>Powered by your favorite wearable or phone</h2>
-       
-     <br>
-       <%= link_to "COMPETE NOW", new_user_registration_path, class: "btn btn-primary btn-outline-inverse btn-lg",
-              data: { no_turbolink: true } %>
+<section id="intro" data-speed="6" data-type="background">
 
-    </div>
-  </div>  
-</div>
+    <div class="container">
+      <div class="center">
+        <h1>GET FIT, GET PAID! </h1>
+        <h2>Make fitness wagers between friends & family <br>Powered by your favorite wearable or phone</h2>
+         
+       <br>
+         <%= link_to "COMPETE NOW", new_user_registration_path, class: "btn btn-primary btn-outline-inverse btn-lg",
+                data: { no_turbolink: true } %>
+      </div>
+  
+  </div>
+</section>
 <br>
 
-<div class="container-fluid">
-  <div class="center press"><h4>As Seen On </h4>
-  </div>
-  <br><br>
-    <div class="row">
-      <div class="col-xs-6 col-sm-3">
-          <td><%= image_tag "https://dl.dropboxusercontent.com/s/os160yoqoz8spwc/fox.jpg" %></td>
-          </a>
-      </div>
-      <div class="col-xs-6 col-sm-3">
-          <td><%= image_tag "https://dl.dropboxusercontent.com/s/dwbwk8nacm0k68z/hbo.jpg" %></td>
-      </div>
-      <div class="col-xs-6 col-sm-3">
-          <td><%= image_tag "https://dl.dropboxusercontent.com/s/wr0fcywedc4co9x/nbc.jpg" %></td>
-      </div>
-      <div class="col-xs-6 col-sm-3">
-          <td><%= image_tag "https://dl.dropboxusercontent.com/s/0rp74122yfo962s/techcrunch.jpg" %></td>
-      </div>
+<section id="press">
+  <div class="container-fluid">
+    <div class="center"><h4>As Seen On </h4>
     </div>
-</div>
-
+    <br><br>
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            <td><%= image_tag "https://dl.dropboxusercontent.com/s/os160yoqoz8spwc/fox.jpg" %></td>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <td><%= image_tag "https://dl.dropboxusercontent.com/s/dwbwk8nacm0k68z/hbo.jpg" %></td>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <td><%= image_tag "https://dl.dropboxusercontent.com/s/wr0fcywedc4co9x/nbc.jpg" %></td>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <td><%= image_tag "https://dl.dropboxusercontent.com/s/0rp74122yfo962s/techcrunch.jpg" %></td>
+        </div>
+      </div>
+  </div>
+</section>
 <br>
 <br>
 <section class="info">
   <div class="container">
     <header class="center">
-      <h1>FITJAR enables you to compete for cash with friends</h1>
-      <h2>Make friendly wagers to motivate your fitness.  Use your favorite wearable technology to track your calories burned.  The person that burns the most calories wins the pot.  Stay motivated with the idea of taking your friend's money by burning more calories than them</h2>
-      <%= image_tag "https://dl.dropboxusercontent.com/s/4g5khl0egopew26/ideaicon.png" %>
+      <h1>Take Your Friend's Money By Burning More Calories Than Them!</h1>
+      <h2>Make friendly wagers to motivate your fitness.  Use your favorite wearable technology to track your calories burned.  The person that burns the most calories wins the pot.  Stay motivated with the idea of taking your friend's money by burning more calories than them.  The more your invite the larger the pot!</h2>
+
+
+        <div class="fb-like" data-href="http://glacial-sierra-7811.herokuapp.com/" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>
+
+        <div class="fb-like" data-href="https://www.facebook.com/thefitjar" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+
+      
+      
+      <!--<%= image_tag "https://dl.dropboxusercontent.com/s/4g5khl0egopew26/ideaicon.png" %>
       <%= image_tag "https://dl.dropboxusercontent.com/s/5l5hz85u9m0m4l9/arrowicon.png" %>
-      <%= image_tag "https://dl.dropboxusercontent.com/s/zgjh3jg5dmhptx2/webappicon.png" %>
+      <%= image_tag "https://dl.dropboxusercontent.com/s/zgjh3jg5dmhptx2/webappicon.png" %>-->
     </header>
   </div>
 
@@ -62,6 +72,7 @@
       </div>
     </div>
   </div>
+
 
 
 
@@ -91,16 +102,16 @@
 <br>
 <br>
 <br>
-<section class= "accepted">
+
+<section id="CTA" data-speed="4" data-type="background">
+
     <div class="row-fluid ">
       <div class="col-lg-12 col-md-12 col-sm-12">
             <br>
         <h1 class="center">LET THE GAMES BEGIN!</h1>
       </div>
       <br>
-      <br>
-       <br>
-       <br>
+    
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="center">
                     <br>
@@ -111,9 +122,39 @@
     </div>
 </section>
 
+
+
+
+
+
+<!-- FOR PARALLAX http://untame.net/2013/04/how-to-integrate-simple-parallax-with-twitter-bootstrap/ -->
+<script>$(document).ready(function(){
+   // cache the window object
+   $window = $(window);
+ 
+   $('section[data-type="background"]').each(function(){
+     // declare the variable to affect the defined data-type
+     var $scroll = $(this);
+                     
+      $(window).scroll(function() {
+        // HTML5 proves useful for helping with creating JS functions!
+        // also, negative value because we're scrolling upwards                             
+        var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+         
+        // background position
+        var coords = '50% '+ yPos + 'px';
+ 
+        // move the background
+        $scroll.css({ backgroundPosition: coords });    
+      }); // end window scroll
+   });  // end section function
+}); // close out script
+</script>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53beb3c6683d863d"></script>
-<div class="fb-like" data-href="https://www.facebook.com/thefitjar" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+
 
 <br>
 <br>
@@ -124,6 +165,5 @@
 <br>
 <br>
 <br>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53beb3c6683d863d"></script>
+
 

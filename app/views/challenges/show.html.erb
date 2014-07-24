@@ -114,12 +114,11 @@
       <br>
        <br>
       <ul class= "pager">
-          <li><%= link_to 'Edit', edit_challenge_path(@challenge)%></li>
-          <li><%= link_to 'Back', challenges_path %></li>
+           <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
+           <li><%= link_to 'Edit', edit_challenge_path(@challenge)%></li>
       </ul>
     </div>
   </div>
-
 
 
 <br>

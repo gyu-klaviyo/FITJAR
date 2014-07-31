@@ -3,10 +3,19 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "https://dl.dropboxusercontent.com/s/sm3ja2rreztsaj4/blue_dropbox_glyph-vflJ8-C5d.jpg"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :name, presence: true
+ def fullname
+    [name, last_name].join("  ")
+  end
+
+  validates :user_name, presence: true
 #JQ - should have only 1 challenge, change later!
   has_many :challenges, dependent: :destroy
 

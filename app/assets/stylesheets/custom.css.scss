@@ -18,7 +18,7 @@ body {
    
 }
 
-/*BUTTONS FOR THE BODY & BOTTOM PART CALL TO ACTION*/
+/*BUTTONS FOR THE BODY & BOTTOM PART CALL TO ACTION ------make this part of HOME PAGE ONLY*/
     .btn-outline-inverse {
     color: #fff;
     background-color: transparent;
@@ -70,6 +70,7 @@ body {
     position: relative; 
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 100px 0;
+
  h1{
       font-family: 'Oswald', sans-serif;
         color: #FFFFFF;
@@ -87,14 +88,14 @@ body {
 
 }
 #CTA { 
-    background: url('https://dl.dropboxusercontent.com/s/5qqobps6h75jy9i/guy%20with%20abs%20%281%29.jpg') 50% 0 fixed; 
+    background: url('https://dl.dropboxusercontent.com/s/ee4e38awkainqfw/shutterstock_105640865.jpg') 50% 0 fixed; 
     background-size: cover;
     width: 100%;
-padding: 100px 0;
+    padding: 100px 0;
     height: 288px;
     position: relative;
     box-shadow: 0 0 50px rgba(0,0,0,0.3);
-    opacity: .6;
+    /*opacity: .6;*/
     margin-top: -51px;
 
 
@@ -136,12 +137,14 @@ h1{
 }
 
 
-/*NAVIGATION BAR*/
+/*NAVIGATION BAR - NOTE: margin-bottom and border-botton color needs to reviewed with artist*/
 
 .navbar-default {
   background-color: #111111;
   font-family: 'Oswald', sans-serif;
     box-shadow: 0 0 50px rgba(0,0,0,1);
+  margin-bottom: 0px;
+  border-bottom-color: #0192B5;
 
 }
 
@@ -151,7 +154,6 @@ h1{
   font-weight: 400;
   color: #FFFFFF;
   font-size: 30px;
-     box-shadow: 0 0 50px rgba(0,0,0,0.8);
 
 }
 
@@ -161,7 +163,6 @@ h1{
   font-weight: bold;
   color: #0192B5;
   background-color: #111111;
-     box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
 .site-footer{

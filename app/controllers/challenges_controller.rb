@@ -10,6 +10,10 @@ class ChallengesController < ApplicationController
     @challenges = Challenge.where(user: current_user).order("created_at DESC")
   end
 
+  def player
+    @challenges = Challenge.where(user: current_user).order("created_at DESC")
+  end
+
   #def get_questions
     #@questions = Questions.find(params[:questions_id])
     #@challenge = @question.challenge.find(params[:id])
@@ -26,6 +30,7 @@ class ChallengesController < ApplicationController
   # GET /challenges/1.json
   def show
     @challenges = Challenge.all
+    
     #try this one:
     #@challenge=Challenge.all.find(params[:challenge_id])
     #@question = @challenge.question.find(params[:id])
@@ -71,20 +76,22 @@ class ChallengesController < ApplicationController
     #take user id and assign to host if user created=HOST...else user END
     @challenge.user_id = current_user.id
 
+
+    Stripe.api_key = ENV["STRIPE_API_KEY"]
+    token = params[:stripeToken]
+
+    recipient = Stripe::Recipient.create(
+      :name => current_user.fullname,
+      :type => "individual",
+      :bank_account => token
+      )
+
+    current_user.recipient = recipient.id
+    current_user.save
+
+
 #move this to DEVISE edit user profile.  You don't want users to put in their bank info in the begining of creating a challenge
-    if current_user.recipient.blank?
-      Stripe.api_key = ENV["STRIPE_API_KEY"]
-      token = params[:stripeToken]
 
-      recipient = Stripe::Recipient.create(
-        :name => current_user.name,
-        :type => "individual",
-        :bank_account => token
-        )
-
-      current_user.recipient = recipient.id
-      current_user.save
-    end
   
     respond_to do |format|
       if @challenge.save
@@ -129,13 +136,13 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :description, :stake, :duration, :start, :image)
+      params.require(:challenge).permit(:name, :duration, :start, :image, :stake)
     end
 
     #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     def check_user
       if current_user != @challenge.user
-        redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
+        redirect_to root_url, alert: "Sorry, only the host may edit this challenges"
       end
     end
 end

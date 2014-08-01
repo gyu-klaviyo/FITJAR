@@ -11,9 +11,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
- def fullname
-    [name, last_name].join("  ")
+ def full_name
+    [first_name, last_name].join("  ")
   end
+
+
 
   validates :user_name, presence: true
 #JQ - should have only 1 challenge, change later!

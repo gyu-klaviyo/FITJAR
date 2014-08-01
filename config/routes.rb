@@ -1,5 +1,8 @@
 Fitjar::Application.routes.draw do
   
+  resources :accounts
+  resources :charges
+
 authenticated :user do
   root :to => "challenges#index"
 end

@@ -10,19 +10,7 @@ class PaymentsController < ApplicationController
 #just added, you need to show history and add a new colmn, wheter they were a host or player and show ALL history
     @payments = Payment.all.where(player: current_user).order("created_at DESC")
 
-      if current_user.recipient.blank?
-      Stripe.api_key = ENV["STRIPE_API_KEY"]
-      token = params[:stripeToken]
-
-      recipient = Stripe::Recipient.create(
-        :name => current_user.name,
-        :type => "individual",
-        :bank_account => token
-        )
-
-      current_user.recipient = recipient.id
-      current_user.save
-    end
+     
   end
 
 
@@ -65,6 +53,8 @@ class PaymentsController < ApplicationController
       flash[:danger] = e.message
     end
     
+     current_user.recipient = authorize.id
+    current_user.save
 #stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
 
  transfer = Stripe::Transfer.create(

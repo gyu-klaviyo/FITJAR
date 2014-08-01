@@ -9,7 +9,7 @@
       
       <div class="col-md-8">
         <h2 class="center"><%= @challenge.name %> Challenge</h2><br>
-          <p>Your host <%= @challenge.user.name %>, has set the stage for the challenge below.  Click here to read more about the<button class="btn btn-link" data-toggle="modal" data-target="#myModal">
+          <p>Your host <%= @challenge.user.user_name %>, has set the stage for the challenge below.  Click here to read more about the<button class="btn btn-link" data-toggle="modal" data-target="#myModal">
                   rules
                 </button>
 
@@ -43,6 +43,23 @@
             <div class="center-block">
               <%= link_to "ACCEPT CHALLENGE", new_challenge_payment_path(@challenge), class: "btn btn-primary  btn-block", data: { no_turbolink: true } %>
              </div>
+             <div class="center-block">
+                  <%= form_tag charges_path do %>
+                    <article>
+                      <label class="amount">
+                        <span>Price: $5.00</span>
+                      </label>
+                    </article>
+
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                            data-description="A month's subscription"
+                            data-amount="500">
+                    </script>
+                  <% end %>
+             </div>
+
+             
           </div>
       </div>
   </div>
@@ -54,7 +71,7 @@
   <div class="well">
 
     <div class="row">
-      <div class="col-xs-6 col-md-4"><h4>Challenge Name: <%= @challenge.name %><br><br>Host: <%= @challenge.user.name %><br><br>Last Sync:<br></h4></li>
+      <div class="col-xs-6 col-md-4"><h4>Challenge Name: <%= @challenge.name %><br><br>Host: <%= @challenge.user.user_name %><br><br>Last Sync:<br></h4></li>
       </div>
       <div class="col-xs-6 col-md-4"><h2><%= number_to_currency(@challenge.stake) %></h2><h4>JAR Amount <br></h4>
       </div>

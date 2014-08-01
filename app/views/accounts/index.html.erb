@@ -1,0 +1,131 @@
+<div class="container">
+    <h2 class="center">Account Infomation</h2>
+<br>
+<br>
+<h4>Account History</h4>
+  <table class="table table-striped">
+    <tr>
+      <th class="center">End date</th>
+      <th class="center">Type</th>
+      <th class="center">Description</th>
+      <th class="center">Debit</th>
+      <th class="center">Credit</th>
+      <th class="center">Balance</th>
+      <th class="center">Withdraw</th>
+    </tr>
+
+ <% @accounts.each do |account| %>
+      <tr>
+        <td class="center">account.end_date  %></td>
+        <td class="center"><%= account.type %></td>
+        <td class="center"><%= account.description %></td>
+        <td class="center"><%= account.debit %></td>
+        <td class="center"><%= account.credit %></td>
+        <td class="center"><%= account.balance %></td>
+        <td class="center"><%= account.withdraw %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  
+<br>
+<br>
+<br>
+<br>
+ 
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Withdraw
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+  
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Change Bank Info
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ul class= "pager">
+           <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
+      </ul>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<h1>Listing accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>End date</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Debit</th>
+      <th>Credit</th>
+      <th>Balance</th>
+      <th>Withdraw</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.end_date %></td>
+        <td><%= account.type %></td>
+        <td><%= account.description %></td>
+        <td><%= account.debit %></td>
+        <td><%= account.credit %></td>
+        <td><%= account.balance %></td>
+        <td><%= account.withdraw %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account', new_account_path %>

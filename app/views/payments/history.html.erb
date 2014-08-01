@@ -1,3 +1,4 @@
+
 <div class="container">
     <h2 class="center">Account Infomation</h2>
 <br>
@@ -16,7 +17,7 @@
     <% @payments.each do |payment| %>
       <tr>
         <td class="center"><%= image_tag payment.challenge.image.url(:thumb) %></td>
-        <td class="center"><%= payment.challenge.name %></td>
+        <td class="center"><%= payment.challenge.user_name %></td>
         <td class="center"><%= number_to_currency(payment.challenge.stake) %></td>
         <td class="center"><%= number_to_currency(payment.challenge.stake) %></td>
         <td class="center"><%= payment.host.name %></td>

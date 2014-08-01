@@ -81,7 +81,7 @@ class ChallengesController < ApplicationController
     token = params[:stripeToken]
 
     recipient = Stripe::Recipient.create(
-      :name => current_user.fullname,
+      :name => current_user.full_name,
       :type => "individual",
       :bank_account => token
       )

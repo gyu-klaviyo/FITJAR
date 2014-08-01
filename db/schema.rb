@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731214942) do
+ActiveRecord::Schema.define(version: 20140801052649) do
+
+  create_table "accounts", force: true do |t|
+    t.date     "end_date"
+    t.string   "type"
+    t.string   "description"
+    t.decimal  "debit"
+    t.decimal  "credit"
+    t.decimal  "balance"
+    t.decimal  "withdraw"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -63,6 +75,7 @@ ActiveRecord::Schema.define(version: 20140731214942) do
     t.integer  "host_id"
     t.integer  "challenge_id"
     t.integer  "balance"
+    t.string   "authorize"
   end
 
   create_table "questions", force: true do |t|

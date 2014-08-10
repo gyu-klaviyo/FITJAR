@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
- def full_name
+  def full_name
     [first_name, last_name].join("  ")
   end
 
@@ -20,9 +20,13 @@ class User < ActiveRecord::Base
   validates :user_name, presence: true
 #JQ - should have only 1 challenge, change later!
   has_many :challenges, dependent: :destroy
+  has_many :payments
+  has_many :banks
+  has_many :withdraws
 
   #JQ - this is your users controller, it tells your "class" payment, that user id is instead player_id or host_id****foreign key says "seller_id replaced with host_id, sales replaced with history"
   has_many :history, class_name: "payment", foreign_key: "player_id"
   has_many :history, class_name: "payment", foreign_key: "host_id"
-  has_many :questions
+  has_many :questions, dependent: :destroy
+  #not sure if you want to delete a commen if user is deleted^
 end

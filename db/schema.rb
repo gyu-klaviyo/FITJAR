@@ -11,18 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801052649) do
+ActiveRecord::Schema.define(version: 20140808050713) do
 
   create_table "accounts", force: true do |t|
-    t.date     "end_date"
-    t.string   "type"
-    t.string   "description"
-    t.decimal  "debit"
-    t.decimal  "credit"
-    t.decimal  "balance"
-    t.decimal  "withdraw"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "withdraw"
+    t.integer  "balance"
+    t.integer  "credit"
+    t.integer  "debit"
+    t.string   "description"
+    t.date     "end_date"
+    t.string   "type"
+  end
+
+  create_table "banks", force: true do |t|
+    t.string   "bank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "recipient_id"
   end
 
   create_table "challenges", force: true do |t|
@@ -44,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140801052649) do
     t.integer  "pool"
     t.boolean  "status"
     t.date     "start"
+    t.boolean  "paid"
   end
 
   create_table "comments", force: true do |t|
@@ -65,6 +74,12 @@ ActiveRecord::Schema.define(version: 20140801052649) do
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
+  create_table "devices", force: true do |t|
+    t.string   "device"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "payments", force: true do |t|
     t.string   "address"
     t.string   "city"
@@ -75,7 +90,7 @@ ActiveRecord::Schema.define(version: 20140801052649) do
     t.integer  "host_id"
     t.integer  "challenge_id"
     t.integer  "balance"
-    t.string   "authorize"
+    t.boolean  "paid",         default: false
   end
 
   create_table "questions", force: true do |t|
@@ -110,9 +125,22 @@ ActiveRecord::Schema.define(version: 20140801052649) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.date     "date_of_birth"
+    t.string   "gender"
+    t.string   "height"
+    t.integer  "weight"
+    t.string   "activity"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "withdraws", force: true do |t|
+    t.integer  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "bank_id"
+  end
 
 end

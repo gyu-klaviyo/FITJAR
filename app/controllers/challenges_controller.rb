@@ -30,6 +30,8 @@ class ChallengesController < ApplicationController
   # GET /challenges/1.json
   def show
     @challenges = Challenge.all
+
+    
     
     #try this one:
     #@challenge=Challenge.all.find(params[:challenge_id])
@@ -75,6 +77,7 @@ class ChallengesController < ApplicationController
     #set this to HOST ID
     #take user id and assign to host if user created=HOST...else user END
     @challenge.user_id = current_user.id
+#create migration: host boolean, true
 
 
     Stripe.api_key = ENV["STRIPE_API_KEY"]
@@ -88,7 +91,6 @@ class ChallengesController < ApplicationController
 
     current_user.recipient = recipient.id
     current_user.save
-
 
 #move this to DEVISE edit user profile.  You don't want users to put in their bank info in the begining of creating a challenge
 

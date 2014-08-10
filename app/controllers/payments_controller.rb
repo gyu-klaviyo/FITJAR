@@ -23,7 +23,7 @@ class PaymentsController < ApplicationController
   end
 
   # GET /payments/1/edit
- 
+
 
   # POST /payments
   # POST /payments.json
@@ -37,9 +37,10 @@ class PaymentsController < ApplicationController
     #fill in player id when you enter a new player, authenticate above, in purple
     @payment.player_id = current_user.id
     @payment.host_id = @host.id
-
+    @payment.update_attribute(:paid, true)
+    
 #stripe credit card payment begins
-   Stripe.api_key = ENV["STRIPE_API_KEY"]
+     Stripe.api_key = ENV["STRIPE_API_KEY"]
     token = params[:stripeToken]
 
     begin
@@ -53,8 +54,6 @@ class PaymentsController < ApplicationController
       flash[:danger] = e.message
     end
     
-     current_user.recipient = authorize.id
-    current_user.save
 #stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
 
  transfer = Stripe::Transfer.create(
@@ -63,10 +62,22 @@ class PaymentsController < ApplicationController
       :recipient => @host.recipient
       )
 
+#stripe credit card payment begins
+
+#stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
+
+# Set your secret key: remember to change this to your live secret key in production
+# See your keys here https://dashboard.stripe.com/account
+   #Stripe.api_key = ENV["STRIPE_API_KEY"]
+    #token = params[:stripeToken]
+
+
+   
+
     respond_to do |format|
       if @payment.save
         #redirect them to DASHBOARD
-        format.html { redirect_to root_url, notice: 'Payment was successfully created.'}
+        format.html { redirect_to @challenge, notice: 'Payment was successfully created.'}
         format.json { render action: 'show', status: :created, location: @payment }
       else
         format.html { render action: 'new' }
@@ -87,6 +98,6 @@ class PaymentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def payment_params
-      params.require(:payment).permit(:address, :city, :state)
+      params.require(:payment).permit(:address, :city, :state, :paid)
     end
 end

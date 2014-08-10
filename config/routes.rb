@@ -1,6 +1,13 @@
 Fitjar::Application.routes.draw do
   
-  resources :accounts
+
+
+  resources :banks do
+  resources :withdraws
+
+end
+
+  resources :devices
   resources :charges
 
 authenticated :user do
@@ -15,8 +22,9 @@ end
 #include payment id in the URL "do"
   devise_for :users
   resources :challenges do
-    resources :questions, only: [:new, :create]
+    resources :questions, except: [:show, :index]
     resources :comments, :only => [:create, :destroy]
+    
     resources :payments, only: [:new, :create]
   end
 

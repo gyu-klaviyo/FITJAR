@@ -32,10 +32,7 @@
   </div>
 
 
-        
-   <%# if current_user.first_name.blank? %>
-    <br>
-    <h1>Bank Account Information</h1>
+            <h1>Bank Account Information</h1>
 
     <div class="form-group">
       <%= label_tag :country %>
@@ -49,7 +46,7 @@
       <%= label_tag :account_number %>
       <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
     </div>
-  <%# end %>
+
 
 
  <div class="form-group">

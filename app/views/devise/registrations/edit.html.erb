@@ -4,52 +4,43 @@
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
 
-    <%= image_tag @user.avatar.url(:medium) %>
+  
 
 
+<div class="row">
+  <div class="col-xs-5">
+    
+    <div class="form-group">
+      <%= image_tag @user.avatar.url(:medium), class: "img-rounded img-responsive"%>
+    </div>
 
-          <div class="form-group">
-            <%= label_tag :country %>
-            <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
-          </div>
-          <div class="form-group">
-            <%= label_tag :routing_number %>
-            <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
-          </div>
-          <div class="form-group">
-            <%= label_tag :account_number %>
-            <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
-          </div>
-       
-          <div class="form-group">
-         <%= link_to "SAVE", new_user_registration_path, class: "btn btn-primary btn-outline-inverse btn-lg",
-              data: { no_turbolink: true } %>
-               </div>
-   
+    <div class="container pull-left" style="max-width:250px; ">
+      <%= f.file_field :avatar, class: "form-control"  %>
+    </div>
 
-
+  <br>
+  <br>
+<br>
 
     <div class="form-group">
       <%= f.label :user_name %>
       <%= f.text_field :user_name, :autofocus => true, class: "form-control" %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar, :autofocus => true, class: "form-control" %>
+   
+  <div class="row">
+    <div class="col-xs-6">
+       <%= f.label :first_name %>
+        <%= f.text_field :first_name, :autofocus => true, class: "form-control" %>
     </div>
-
-    <div class="form-group">
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name, :autofocus => true, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
+    <div class="col-xs-6">
+      <div class="form-group">
       <%= f.label :last_name %>
       <%= f.text_field :last_name, :autofocus => true, class: "form-control" %>
+      </div>
     </div>
-
-
+  </div>
+  
     <div class="form-group">
       <%= f.label :email %><br />
       <%= f.email_field :email, class: "form-control" %>
@@ -61,33 +52,84 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>
-    </div>
+      <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Change Password
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+            <div class="form-group">
+              <%= f.label :password %> <i>(edit)</i><br />
+              <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>
+            </div>
 
-    <div class="form-group">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, class: "form-control" %>
-    </div>
-
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
     <div class="form-group">
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, class: "form-control" %>
     </div>
 
-    <div class="form-group">
-      <%= f.submit "Update", class: "btn btn-primary" %>
-    </div>
-  <% end %>
-<br>
-<br>
-<br>
-  <h3>Cancel my account</h3>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-danger" %></p>
 
-<ul class= "pager">
+      <ul class= "pager">
            <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
       </ul>
+
+  
+
+
+       </div>
+<br>
+<br>
+<br>
+
+ 
+  </div>
+  <div class="col-md-5">
+  
+  <div class="btn-group">   
+    <div class="row">
+      <h5>Gender</h5>  
+       <%=f.radio_button :gender, 'male', checked: true%>
+        <%=f.radio_button :gender, 'female'%>
+    </div>
+
+   
+  
+    <div class="form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div class="form-group">
+        Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+      </div>
+    <% end %>
+
+     
+    <div class="form-group">
+      <%= f.submit "UPDATE", class: "btn btn-primary btn-block" %>
+    </div>
+<br>
+    
+  </div>
+</div>
+
+
+<% end %>
+
+   
 </div>

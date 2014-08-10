@@ -19,8 +19,15 @@
     <ul class="nav navbar-nav navbar-right">     
       <% if user_signed_in? %>  
         <li><%= link_to "CHALLENGES", challenges_path %></li>
-        <li><a href="/accounts">ACCOUNT <span class="badge">$42</span></a></li>
-        <li class="dropdown">
+
+        <% if user_signed_in? %>  
+            <li><a href="/banks/new">ACCOUNT <span class="badge">$42</span></a></li>
+            <li class="dropdown">
+        <% else %>
+            <li><a href="/banks">ACCOUNT <span class="badge">$42</span></a></li>
+            <li class="dropdown">
+        <% end %>
+
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.user_name.upcase  %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="active"><%= link_to "Edit Profile", edit_user_registration_path %></li>

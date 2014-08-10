@@ -1,13 +1,12 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_challenge
   before_action :authenticate_user!, only: [:new, :create]
   before_action :require_admin, only: [:edit, :update, :destroy]
 
   # GET /questions
   # GET /questions.json
-  def index
-    @questions = Question.all.order('created_at DESC')
-  end
+
 
   # GET /questions/1
   # GET /questions/1.json
@@ -42,7 +41,8 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.user_id = current_user.id
-    @question.user_name = current_user.name
+    @question.user_name = current_user.user_name
+    @question.challenge_id = @challenge.id
     @challenge = Challenge.find(params[:challenge_id])
 #JQ - per video when we created a payment with new challenge, we also gave it a challenge ID in the sql column
 
@@ -51,7 +51,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         #UserMailer.question_notification(current_user.name, @question.subject, @question.details).deliver
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Question was successfully created.' }
         format.json { render action: 'show', status: :created, location: @question }
       else
         format.html { render action: 'new' }
@@ -86,6 +86,11 @@ class QuestionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    def set_challenge
+      @challenge = Challenge.find(params[:challenge_id])
+    end
+    
     def set_question
       @question = Question.find(params[:id])
     end

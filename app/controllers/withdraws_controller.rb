@@ -43,6 +43,8 @@ class WithdrawsController < ApplicationController
       :recipient => @bank.recipient_id
       )
 
+    @withdraw.user_id = current_user.id
+
 #stripe credit card payment begins
   
 

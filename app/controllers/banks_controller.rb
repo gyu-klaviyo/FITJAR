@@ -39,6 +39,7 @@ class BanksController < ApplicationController
 
     @bank.recipient_id = recipient.id
 
+
 #stripe credit card payment begins
    
     

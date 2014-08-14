@@ -1,9 +1,11 @@
 Fitjar::Application.routes.draw do
   
+  get "withdraws/new_release" => 'withdraws#new_release', :as => :new_release
 
 
   resources :banks do
   resources :withdraws
+
 
 end
 

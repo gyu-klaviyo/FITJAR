@@ -21,6 +21,7 @@ class BanksController < ApplicationController
   def edit
   end
 
+ 
   # POST /banks
   # POST /banks.json
   def create
@@ -31,12 +32,17 @@ class BanksController < ApplicationController
     token = params[:stripeToken]
 
     recipient = Stripe::Recipient.create(
-      :name => "Jackson Quach",
+      :name => current_user.full_name,
       :type => "individual",
       :bank_account => token
       )
 
     @bank.recipient_id = recipient.id
+
+#stripe credit card payment begins
+   
+    
+#stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
 
     current_user.save
     respond_to do |format|

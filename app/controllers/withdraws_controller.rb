@@ -21,7 +21,8 @@ class WithdrawsController < ApplicationController
   # GET /withdraws/1/edit
   def edit
   end
-
+  
+  
   # POST /withdraws
   # POST /withdraws.json
   def create
@@ -37,7 +38,7 @@ class WithdrawsController < ApplicationController
 #stripe bank transfer > insert expression here:  if @challengewinner=Y, $ pushes into the user's balance summation of credit card charge amount)  #2 challenge stake+challenge stake
 
  transfer = Stripe::Transfer.create(
-      :amount => 400000,
+      :amount => 500000,
       :currency => "usd",
       :recipient => @bank.recipient_id
       )

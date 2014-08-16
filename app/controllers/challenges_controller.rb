@@ -89,8 +89,8 @@ class ChallengesController < ApplicationController
       :bank_account => token
       )
 
-    current_user.recipient = recipient.id
-    current_user.save
+      current_user.recipient = recipient.id
+      current_user.save
 
 #move this to DEVISE edit user profile.  You don't want users to put in their bank info in the begining of creating a challenge
 

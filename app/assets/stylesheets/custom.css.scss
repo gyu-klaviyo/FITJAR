@@ -1,5 +1,7 @@
 @import "bootstrap";
 @import 'bootstrap-datetimepicker';
+
+
 /*@font-family-base*/
 
 body {
@@ -148,6 +150,10 @@ h1{
 
 }
 
+.alert {
+  margin-bottom: 0px;
+}
+
 .navbar-default .navbar-brand {
  font-family: 'Oswald', sans-serif;
   word-spacing: 5px;
@@ -171,9 +177,10 @@ h1{
    bottom:0px;
    height:10px;
    width:100%;
-   background-color: #FFFFFF;
+  
    font-family: 'Oswald', sans-serif;
    padding-bottom: 10px;
+
 
 }
 

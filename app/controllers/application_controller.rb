@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :last_name
     devise_parameter_sanitizer.for(:account_update) << :user_name
     devise_parameter_sanitizer.for(:account_update) << :avatar
+    devise_parameter_sanitizer.for(:account_update) << :gender
+    devise_parameter_sanitizer.for(:account_update) << :height
+    devise_parameter_sanitizer.for(:account_update) << :weight
+    devise_parameter_sanitizer.for(:account_update) << :activity
   end
 end
 

@@ -1,135 +1,134 @@
 <div class="container">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2 class="center">Edit Profile</h2><br>
 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
 
-  
+        
 
 
-<div class="row">
-  <div class="col-xs-5">
-    
-    <div class="form-group">
-      <%= image_tag @user.avatar.url(:medium), class: "img-rounded img-responsive"%>
-    </div>
-
-    <div class="container pull-left" style="max-width:250px; ">
-      <%= f.file_field :avatar, class: "form-control"  %>
-    </div>
-
-  <br>
-  <br>
-<br>
-
-    <div class="form-group">
-      <%= f.label :user_name %>
-      <%= f.text_field :user_name, :autofocus => true, class: "form-control" %>
-    </div>
-
-   
-  <div class="row">
-    <div class="col-xs-6">
-       <%= f.label :first_name %>
-        <%= f.text_field :first_name, :autofocus => true, class: "form-control" %>
-    </div>
-    <div class="col-xs-6">
-      <div class="form-group">
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name, :autofocus => true, class: "form-control" %>
-      </div>
-    </div>
-  </div>
-  
-    <div class="form-group">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, class: "form-control" %>
-    </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div class="form-group">
-        Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-      </div>
-    <% end %>
-
-      <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  Change Password
-                </a>
-              </h4>
+    <div class="container" style="max-width:550px; ">
+            <div class="row">  
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <%= image_tag @user.avatar.url(:medium), class: "img-rounded img-responsive"%>
+                </div>
+              </div>
+             
+             <div class="col-xs-6"> 
+                <div class="form-group">
+                  <%= f.label :activity %><br />
+                  <%= f.text_area  :activity, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.file_field :avatar, class: "form-control"  %>
+                </div>
+              </div>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
+             
+
+              <div class="form-group">
+                <%= f.label :user_name %>
+                <%= f.text_field :user_name, :autofocus => true, class: "form-control" %>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6">
+                  <%= f.label :first_name %>
+                  <%= f.text_field :first_name, :autofocus => true, class: "form-control" %>
+                </div>
+                <div class="col-xs-6">
+                  <div class="form-group">
+                  <%= f.label :last_name %>
+                  <%= f.text_field :last_name, :autofocus => true, class: "form-control" %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :email %><br>
+                <%= f.email_field :email, class: "form-control" %>
+              </div>
+<br>
+              <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          Change Password
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <%= f.label :password %> <i>(edit)</i><br />
+                          <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>
+                        </div>
+
+                        <div class="form-group">
+                          <%= f.label :password_confirmation %><br />
+                          <%= f.password_field :password_confirmation, class: "form-control" %>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <h2 class="center">Attributes</h2>
+
+              <div class="form-group">
+                <%= f.select :gender, ['select','MALE', 'FEMALE'], class: "dropdown-header"   %>
+              </div>
+             
+              <div class="form-group">
+                <%= f.label :date_of_birth %><br />
+                <%= f.date_select :date_of_birth, class: "form-control" %>
+              </div>
+              <div class="input-group" id="datetimepicker7">
+                <span class="input-group-addon datepickerbutton">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                <input type='text' class="form-control"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </span>
+              </div>
+               <div class="form-group">
+                <%= f.label :height %><br />
+                <%= f.text_field  :height, class: "form-control" %>
+              </div>
+                <div class="form-group">
+                <%= f.label :weight %><br />
+                <%= f.text_field  :weight, class: "form-control" %>
+              </div>
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div class="form-group">
+                  Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+                </div>
+              <% end %>
+
+          <br><br><br>
             <div class="form-group">
-              <%= f.label :password %> <i>(edit)</i><br />
-              <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br>
+              <%= f.password_field :current_password, class: "form-control" %>
             </div>
 
+            
+               
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <div class="form-group">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, class: "form-control" %>
+              Currently waiting confirmation for: <%= resource.unconfirmed_email %>
             </div>
-          </div>
-        </div>
-      </div>
-<br>
-    <div class="form-group">
-      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, class: "form-control" %>
+            <% end %>
+            <div class="form-group">
+              <%= f.submit "UPDATE", class: "btn btn-primary btn-block" %>
+            </div>
+            
+        <% end %>
     </div>
 
-
-
-      <ul class= "pager">
-           <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
-      </ul>
-
-  
-
-
-       </div>
-<br>
-<br>
-<br>
-
- 
   </div>
-  <div class="col-md-5">
-  
-  <div class="btn-group">   
-    <div class="row">
-      <h5>Gender</h5>  
-       <%=f.radio_button :gender, 'male', checked: true%>
-        <%=f.radio_button :gender, 'female'%>
-    </div>
 
-   
-  
-    <div class="form-group">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, class: "form-control" %>
-    </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div class="form-group">
-        Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-      </div>
-    <% end %>
-
-     
-    <div class="form-group">
-      <%= f.submit "UPDATE", class: "btn btn-primary btn-block" %>
-    </div>
-<br>
-    
-  </div>
-</div>
-
-
-<% end %>
-
-   
-</div>
+           <ul class= "pager">
+               <li class="previous"><%= link_to "&larr; Back".html_safe, challenges_path %></li>
+          </ul>

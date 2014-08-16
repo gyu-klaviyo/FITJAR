@@ -16,47 +16,51 @@
             </div>
     <br><br>
 
-   
-  <div class="form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :duration %>
-    <%= f.text_area :duration, class: "form-control" %>
-  </div>
+    <form class="form-horizontal" role="form">
+      <div class="container">
+<!-- NAME OF CHALLENGE --> 
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-5 control-label" style="text-align: right">Name Your Challenge:</label>
+            <div class="col-sm-3">
+              <%= f.text_field :name, :placeholder => "Hell Week!", autofocus: true, class: "form-control" %>
+            </div>
+          </div><br><br>
+<!-- WHEN SHALL WE BEGIN --> 
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">When Shall We Begin?</label>
+              <div class="col-sm-3">
+                <%= f.date_field :start, :placeholder => " mm/dd/yyyy", class: "form-control" %>
+              </div>
+          </div><br><br>
 
-  <div class="form-group">
-    <%= f.label :stake %>
-    <%= f.text_field :stake, class: "form-control" %>
-  </div>
+<!-- DURATION = DATE + 7, 21, OR 30 DAYS --> 
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Duration:</label>
+            <div class="col-sm-3">
+                  <div class="btn-group">   
+                    <%= f.select(:duration, options_for_select([['7  Days',7], ['21  Days',21], ['30  Days',30]]), {}, {class: "form-control"}) %>
+                  </div>
+            </div>
+          </div><br><br>
+<!-- STAKE-->  
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-5 control-label" style="text-align: right">Stake:</label>
+            <div class="col-sm-3">
+                  <div class="btn-group">   
+                    <%= f.select(:stake, options_for_select([['$0',0], ['$10',10], ['$20',20], ['$50',50], ['$100',100],['Other',0]]), {}, {class: "form-control"}) %>
+                  </div>
+            </div>
+          </div><br><br>
+<!-- BUTTON -->     
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-5 control-label" style="text-align: right"></label>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <%= f.submit class: "btn btn-primary btn-block" %>
+                </div>
+              </div>
+          </div><br><br>
+      </div>  <!--<<<DIV FOR THE CONTAINER -->   
+    </form>
+<%end%>
 
-
-            <h1>Bank Account Information</h1>
-
-    <div class="form-group">
-      <%= label_tag :country %>
-      <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
-    </div>
-    <div class="form-group">
-      <%= label_tag :routing_number %>
-      <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
-    </div>
-    <div class="form-group">
-      <%= label_tag :account_number %>
-      <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
-    </div>
-
-
-
- <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
-
-     
-
-<br>
-<br>
-<br>
-<br>

@@ -26,7 +26,7 @@ end
   resources :challenges do
     resources :questions, except: [:show, :index]
     resources :comments, :only => [:create, :destroy]
-    
+
     resources :payments, only: [:new, :create]
   end
 

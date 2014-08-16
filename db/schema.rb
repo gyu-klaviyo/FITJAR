@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808050713) do
+ActiveRecord::Schema.define(version: 20140816202225) do
 
   create_table "accounts", force: true do |t|
     t.datetime "created_at"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20140808050713) do
     t.boolean  "status"
     t.date     "start"
     t.boolean  "paid"
+    t.date     "end_date"
   end
 
   create_table "comments", force: true do |t|

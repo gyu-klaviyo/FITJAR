@@ -60,6 +60,7 @@ class ChallengesController < ApplicationController
     
   end
 
+
   # GET /challenges/new
   def new
     @challenge = Challenge.new
@@ -80,17 +81,7 @@ class ChallengesController < ApplicationController
 #create migration: host boolean, true
 
 
-    Stripe.api_key = ENV["STRIPE_API_KEY"]
-    token = params[:stripeToken]
-
-    recipient = Stripe::Recipient.create(
-      :name => current_user.full_name,
-      :type => "individual",
-      :bank_account => token
-      )
-
-      current_user.recipient = recipient.id
-      current_user.save
+   
 
 #move this to DEVISE edit user profile.  You don't want users to put in their bank info in the begining of creating a challenge
 
@@ -138,7 +129,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.  ADD WEARABLE TECH HERE
     def challenge_params
-      params.require(:challenge).permit(:name, :duration, :start, :image, :stake)
+      params.require(:challenge).permit(:name, :duration, :start, :end, :image, :stake)
     end
 
     #DELETE THIS AFTER, MAKES NO SENSE FOR FITJAR>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
